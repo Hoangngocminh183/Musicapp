@@ -85,7 +85,7 @@ namespace Sign_upform
             string confirmPassword = textBox2_confirmpass.Text;
             if (confirmPassword != password)
             {
-                label2_changepass.Text = "Your password is not correct are";
+                label2_changepass.Text = "Your password is not correct";
                 label2_changepass.Visible = true;
                 label2_changepass.BackColor = Color.Transparent;
                 return;
