@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
+namespace Sign_upform
+{
+    public partial class forgotpass_form : Form
+    {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+               int nLeftRect,
+               int nTopRect,
+               int nRightRect,
+               int nBottomRect,
+               int nWidthEllipse,
+               int nHeightEllipse
+            );
+        public forgotpass_form()
+        {
+            InitializeComponent();
+            delayTimer.Interval = 5000; // 5000 milliseconds (5 seconds)
+            delayTimer.Tick += DelayTimer_Tick;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Welcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_email_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private Timer delayTimer = new Timer();
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        Modify modify = new Modify();
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            string email = textBox_Forgot.Text;
+            if (modify.User("SELECT * FROM Users WHERE Email = '" + email + "' ").Count != 0)
+            {
+                changed_your_password changed_Your_Password = new changed_your_password();
+                changed_Your_Password.Show();
+                delayTimer.Start(); // Start the timer before showing Change_password
+                Change_password change_Password = new Change_password();
+                change_Password.SetEmail(email);
+                await Task.Delay(5000);// Use await to asynchronously wait for the timer
+                delayTimer.Stop();  // Stop the timer when 5 seconds have passed
+                // Show Change_password and hide changed_your_password
+                change_Password.Show();
+                changed_Your_Password.Hide();
+                this.Hide();
+            }
+            else
+            {
+                label2_forgot.Text = "Your email does not exist";
+                return;
+            }
+        }
+        private void DelayTimer_Tick(object sender, EventArgs e)
+        {
+            // Stop the timer when 5 seconds have passed
+            delayTimer.Stop();
+
+            // Optionally, add any logic you want to execute after the delay here
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void forgotpass_form_Load(object sender, EventArgs e)
+        {
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
+         button1.Height, 12, 12)); // bo tròn khung login(panel)
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+         panel1.Height, 12, 12));
+        }
+    }
+}
