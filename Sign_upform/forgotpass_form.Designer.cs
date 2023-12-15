@@ -40,11 +40,13 @@
             this.label_email = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.label2_forgot = new System.Windows.Forms.Label();
+            this.invalid_pass = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invalid_pass)).BeginInit();
             this.SuspendLayout();
             // 
             // Welcome
@@ -195,12 +197,26 @@
             this.label2_forgot.Size = new System.Drawing.Size(0, 20);
             this.label2_forgot.TabIndex = 3;
             // 
+            // invalid_pass
+            // 
+            this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
+            this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
+            this.invalid_pass.Location = new System.Drawing.Point(365, 100);
+            this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
+            this.invalid_pass.Name = "invalid_pass";
+            this.invalid_pass.Size = new System.Drawing.Size(334, 46);
+            this.invalid_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.invalid_pass.TabIndex = 5;
+            this.invalid_pass.TabStop = false;
+            this.invalid_pass.Click += new System.EventHandler(this.invalid_pass_Click);
+            // 
             // forgotpass_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.label2_forgot);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -215,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invalid_pass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +250,6 @@
         private System.Windows.Forms.Label label_email;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label label2_forgot;
+        private System.Windows.Forms.PictureBox invalid_pass;
     }
 }

@@ -27,7 +27,7 @@ namespace Sign_upform
         public Login_Artists()
         {
             InitializeComponent();
-            textBox1.Visible = false;
+            invalid_pass.Visible = false;
         }
         Modify modify = new Modify();
         private void button1_Click(object sender, EventArgs e)
@@ -54,8 +54,8 @@ namespace Sign_upform
                 }
                 else
                 {
-                    textBox1.Text = "Your email or password is invalid";
-                    textBox1.Visible = true;
+                    invalid_pass.Text = "Your email or password is invalid";
+                    invalid_pass.Visible = true;
                 }
             }
         }
@@ -83,7 +83,15 @@ namespace Sign_upform
             // The password character is an asterisk.
             textBox2_login.PasswordChar = '*';
             // The control will allow no more than 14 characters.
-            textBox2_login.MaxLength = 24;
+            textBox2_login.MaxLength = 25;
+            if (textBox2_login.Text.Length < 8 || textBox2_login.Text.Length > 24)
+            {
+                invalid_pass.Visible = true;
+            }
+            else
+            {
+                invalid_pass.Visible = false;
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)

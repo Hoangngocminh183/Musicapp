@@ -28,6 +28,7 @@ namespace Sign_upform
             InitializeComponent();
             delayTimer.Interval = 5000; // 5000 milliseconds (5 seconds)
             delayTimer.Tick += DelayTimer_Tick;
+            invalid_pass.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -79,7 +80,7 @@ namespace Sign_upform
             }
             else
             {
-                label2_forgot.Text = "Your email does not exist";
+                invalid_pass.Visible = true;
                 return;
             }
         }
@@ -103,6 +104,11 @@ namespace Sign_upform
          button1.Height, 12, 12)); // bo tròn khung login(panel)
             panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
          panel1.Height, 12, 12));
+        }
+
+        private void invalid_pass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Artists));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1_login = new System.Windows.Forms.Label();
             this.fileSystemWatcher10 = new System.IO.FileSystemWatcher();
             this.label_login = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.fileSystemWatcher6 = new System.IO.FileSystemWatcher();
             this.fileSystemWatcher4 = new System.IO.FileSystemWatcher();
             this.fileSystemWatcher7 = new System.IO.FileSystemWatcher();
+            this.invalid_pass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher10)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,18 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invalid_pass)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(411, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 24);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1_login
             // 
@@ -330,13 +320,25 @@
             this.fileSystemWatcher7.EnableRaisingEvents = true;
             this.fileSystemWatcher7.SynchronizingObject = this;
             // 
+            // invalid_pass
+            // 
+            this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
+            this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
+            this.invalid_pass.Location = new System.Drawing.Point(409, 74);
+            this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
+            this.invalid_pass.Name = "invalid_pass";
+            this.invalid_pass.Size = new System.Drawing.Size(316, 48);
+            this.invalid_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.invalid_pass.TabIndex = 8;
+            this.invalid_pass.TabStop = false;
+            // 
             // Login_Artists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1155, 591);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.label1_login);
             this.Controls.Add(this.label_login);
             this.Controls.Add(this.panel1);
@@ -360,14 +362,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invalid_pass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1_login;
         private System.IO.FileSystemWatcher fileSystemWatcher10;
         private System.Windows.Forms.Label label_login;
@@ -393,5 +394,6 @@
         private System.IO.FileSystemWatcher fileSystemWatcher6;
         private System.IO.FileSystemWatcher fileSystemWatcher4;
         private System.IO.FileSystemWatcher fileSystemWatcher7;
+        private System.Windows.Forms.PictureBox invalid_pass;
     }
 }

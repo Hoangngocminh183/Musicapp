@@ -16,6 +16,7 @@ namespace Sign_upform
         public Change_password_Artists()
         {
             InitializeComponent();
+            invalid_pass.Visible = false;
         }
         private string userEmail;
         public void SetEmail(string email)
@@ -29,9 +30,7 @@ namespace Sign_upform
             string confirmPassword = textBox2_confirmpass.Text;
             if (confirmPassword != password)
             {
-                label2_changepass.Text = "Your password is not correct";
-                label2_changepass.Visible = true;
-                label2_changepass.BackColor = Color.Transparent;
+                invalid_pass.Visible = true;
                 return;
             }
             try
@@ -70,13 +69,34 @@ namespace Sign_upform
         private void textBox2_confirmpass_TextChanged(object sender, EventArgs e)
         {
             // The control will allow no more than 14 characters.
-            textBox2_confirmpass.MaxLength = 24;
+            textBox2_confirmpass.MaxLength = 25;
+            // Kiểm tra điều kiện tối thiểu là 8 ký tự và hiển thị invalid_pass nếu không đạt
+            if (textBox2_confirmpass.Text.Length < 8 || textBox2_confirmpass.Text.Length > 24)
+            {
+                invalid_pass.Visible = true;
+            }
+            else
+            {
+                invalid_pass.Visible = false;
+            }
         }
 
         private void textBox1_changepass_TextChanged(object sender, EventArgs e)
         {
-            // The control will allow no more than 14 characters.
-            textBox1_changepass.MaxLength = 24;
+            // Kiểm tra điều kiện tối thiểu là 8 ký tự và hiển thị invalid_pass nếu không đạt
+            if (textBox1_changepass.Text.Length < 8 || textBox1_changepass.Text.Length > 24)
+            {
+                invalid_pass.Visible = true;
+            }
+            else
+            {
+                invalid_pass.Visible = false;
+            }
+        }
+
+        private void invalid_pass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

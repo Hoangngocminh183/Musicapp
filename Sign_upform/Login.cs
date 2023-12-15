@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Security.Cryptography;
+using Guna.UI2.WinForms.Suite;
 
 namespace Sign_upform
 {
@@ -41,7 +42,7 @@ namespace Sign_upform
            panel1.Height, 12, 12)); // bo tròn khung login(panel)
             button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
            button1.Height, 15, 15));
-            textBox1.Visible = false;
+            invalid_pass.Visible = false;
 
         }
 
@@ -105,8 +106,7 @@ namespace Sign_upform
                 }
                 else
                 {
-                    textBox1.Text = "Your email or password is invalid";
-                    textBox1.Visible = true;
+                    invalid_pass.Visible = true;
                 }
             }
         }
@@ -144,7 +144,16 @@ namespace Sign_upform
             // The password character is an asterisk.
             textBox2_login.PasswordChar = '*';
             // The control will allow no more than 14 characters.
-            textBox2_login.MaxLength = 24;
+            textBox2_login.MaxLength = 25;
+            // Kiểm tra điều kiện tối thiểu là 8 ký tự và hiển thị invalid_pass nếu không đạt
+            if (textBox2_login.Text.Length < 8 || textBox2_login.Text.Length > 24)
+            {
+                invalid_pass.Visible = true;
+            }
+            else
+            {
+                invalid_pass.Visible = false;
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

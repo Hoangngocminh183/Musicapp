@@ -35,6 +35,7 @@ namespace Sign_upform
            panel1.Height, 12, 12)); // bo tròn khung login(panel)
             button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
            button1.Height, 15, 15));
+            invalid_pass.Visible = false;
           
         }
 
@@ -44,6 +45,15 @@ namespace Sign_upform
            
              // The password character is an asterisk.
             textBox2.PasswordChar = '*';
+            // Kiểm tra điều kiện tối thiểu là 8 ký tự và hiển thị invalid_pass nếu không đạt
+            if (textBox2.Text.Length < 8 || textBox2.Text.Length > 24)
+            {
+                invalid_pass.Visible = true;
+            }
+            else
+            {
+                invalid_pass.Visible = false;
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -91,11 +101,9 @@ namespace Sign_upform
             string email = textBox1.Text;
             string password = textBox2.Text;
             string confirm_password = textBox3.Text;
-            if (modify.User("SELECT * FROM Users WHERE Email = '" + email + "' ").Count != 0|| confirm_password != password)
+            if (modify.User("SELECT * FROM Users WHERE Email = '" + email + "' ").Count != 0 || confirm_password != password)
             {
-                label2_signup.Text = "Your email or password is invalid";
-                label2_signup.Visible = true;
-                label2_signup.BackColor = Color.Transparent;
+                invalid_pass.Visible=true;
                 return;
             }
             try
@@ -109,9 +117,7 @@ namespace Sign_upform
             }
             catch
             {
-                label2_signup.Text = "Error creating account";
-                label2_signup.Visible = true;
-                label2_signup.BackColor = Color.Transparent;
+                invalid_pass.Visible = true;
             }
             Form formBackground = new Form();
             try
@@ -221,6 +227,11 @@ namespace Sign_upform
         private void textBox4_login_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void invalid_pass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

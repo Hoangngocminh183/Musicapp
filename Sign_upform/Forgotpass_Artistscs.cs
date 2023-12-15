@@ -17,6 +17,7 @@ namespace Sign_upform
             InitializeComponent();
             delayTimer.Interval = 5000; // 5000 milliseconds (5 seconds)
             delayTimer.Tick += DelayTimer_Tick;
+            invalid_pass.Visible = false;
         }
 
         private void textBox_Forgot_TextChanged(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace Sign_upform
             }
             else
             {
-                label2_forgot.Text = "Your email does not exist";
+                invalid_pass.Visible = true;
                 return;
             }
         }
@@ -64,6 +65,11 @@ namespace Sign_upform
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void invalid_pass_Click(object sender, EventArgs e)
         {
 
         }

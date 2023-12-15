@@ -16,6 +16,7 @@ namespace Sign_upform
         public Signup_Artists()
         {
             InitializeComponent();
+            invalid_pass.Visible = false;
         }
 
         Modify modify = new Modify();
@@ -26,16 +27,12 @@ namespace Sign_upform
             string confirm_password = textBox3.Text;
             if (modify.User("SELECT * FROM Artists WHERE Email = '" + email + "' ").Count != 0)
             {
-                label2_signup.Text = "Your email or password is invalid";
-                label2_signup.Visible = true;
-                label2_signup.BackColor = Color.Transparent;
+                invalid_pass.Visible = true;
                 return;
             }
             if (confirm_password != password)
             {
-                label2_signup.Text = "Your email or password is invalid";
-                label2_signup.Visible = true;
-                label2_signup.BackColor = Color.Transparent;
+                invalid_pass.Visible = true;
                 return;
             }
             try
@@ -46,9 +43,7 @@ namespace Sign_upform
             }
             catch
             {
-                label2_signup.Text = "Your email or password is invalid";
-                label2_signup.Visible = true;
-                label2_signup.BackColor = Color.Transparent;
+                invalid_pass.Visible = true;
             }
             Form formBackground = new Form();
             try

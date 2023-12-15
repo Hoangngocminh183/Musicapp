@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.fileSystemWatcher3 = new System.IO.FileSystemWatcher();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.invalid_pass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -60,6 +61,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invalid_pass)).BeginInit();
             this.SuspendLayout();
             // 
             // label2_signup
@@ -343,12 +345,25 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // invalid_pass
+            // 
+            this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
+            this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
+            this.invalid_pass.Location = new System.Drawing.Point(377, 25);
+            this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
+            this.invalid_pass.Name = "invalid_pass";
+            this.invalid_pass.Size = new System.Drawing.Size(316, 48);
+            this.invalid_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.invalid_pass.TabIndex = 6;
+            this.invalid_pass.TabStop = false;
+            // 
             // Signup_Artists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.label2_signup);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -364,6 +379,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invalid_pass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +409,6 @@
         private System.Windows.Forms.Label Welcome;
         private System.IO.FileSystemWatcher fileSystemWatcher3;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.PictureBox invalid_pass;
     }
 }
