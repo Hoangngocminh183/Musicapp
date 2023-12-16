@@ -43,7 +43,11 @@ namespace Sign_upform
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Homepage_Fan homepagefan = new Homepage_Fan();
+            homepagefan.Show();
+            this.Hide();
+            Signup signup = new Signup();
+            signup.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

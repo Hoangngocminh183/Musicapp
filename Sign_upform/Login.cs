@@ -102,7 +102,9 @@ namespace Sign_upform
                 string query = "SELECT * FROM Users WHERE Email = '" + email + "' and Password = '" + hashedPassword + "'";
                 if (modify.User(query).Count != 0)
                 {
-                    MessageBox.Show("Login successfully", "notifications", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Homepage_Fan homepagefan = new Homepage_Fan();
+                    homepagefan.Show();
+                    this.Hide();
                 }
                 else
                 {

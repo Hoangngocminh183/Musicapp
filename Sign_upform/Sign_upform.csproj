@@ -113,6 +113,12 @@
       <DependentUpon>Login_Artists.cs</DependentUpon>
     </Compile>
     <Compile Include="Modify.cs" />
+    <Compile Include="Notification_Artist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification_Artist.Designer.cs">
+      <DependentUpon>Notification_Artist.cs</DependentUpon>
+    </Compile>
     <Compile Include="password_updated.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="Playlist\Artist.Designer.cs">
       <DependentUpon>Artist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Playlist\ControlMussic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Playlist\ControlMussic.Designer.cs">
+      <DependentUpon>ControlMussic.cs</DependentUpon>
     </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
@@ -159,13 +171,7 @@
     <Compile Include="Signup_Artists.Designer.cs">
       <DependentUpon>Signup_Artists.cs</DependentUpon>
     </Compile>
-    <Compile Include="Song.cs" />
-    <Compile Include="Playlist\Song.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Playlist\Song.Designer.cs">
-      <DependentUpon>Song.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Music.cs" />
     <Compile Include="Users.cs" />
     <EmbeddedResource Include="changed_your_password.resx">
       <DependentUpon>changed_your_password.cs</DependentUpon>
@@ -197,6 +203,9 @@
     <EmbeddedResource Include="Notifications.aa.resx">
       <DependentUpon>Notifications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notification_Artist.resx">
+      <DependentUpon>Notification_Artist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="password_updated.resx">
       <DependentUpon>password_updated.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Playlist\Artist.resx">
       <DependentUpon>Artist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Playlist\ControlMussic.resx">
+      <DependentUpon>ControlMussic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
@@ -228,9 +240,6 @@
     </Compile>
     <EmbeddedResource Include="Signup_Artists.resx">
       <DependentUpon>Signup_Artists.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Playlist\Song.resx">
-      <DependentUpon>Song.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -44,35 +44,35 @@ namespace Sign_upform
                 sqlConnection.Close();
             }
         }
-        public List<Song> GetAllSongs()
+        public List<Music> GetMusicList()
         {
-            List<Song> songs = new List<Song>();
+            List<Music> musicList = new List<Music>();
+            string query = "SELECT SongID, Title, Artist, FilePath, ImagePath FROM Songs"; // Thay thế bằng tên bảng thực tế của bạn
 
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
                 sqlConnection.Open();
-                string query = "SELECT SongId, Title, Artist, FilePath, ImagePath FROM Songs";
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
 
-                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
-                using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                while (dataReader.Read())
                 {
-                    while (dataReader.Read())
+                    Music music = new Music
                     {
-                        Song song = new Song
-                        {
-                            SongID = (int)dataReader["SongId"],
-                            Title = dataReader["Title"].ToString(),
-                            Artist = dataReader["Artist"].ToString(),
-                            FilePath = dataReader["FilePath"].ToString(),
-                            ImagePath = dataReader["ImagePath"].ToString(),
-                        };
+                        SongID = dataReader.GetInt32(0),
+                        Title = dataReader.GetString(1),
+                        Artist = dataReader.GetString(2),
+                        FilePath = dataReader.GetString(3),
+                        ImagePath = dataReader.GetString(4)
+                    };
 
-                        songs.Add(song);
-                    }
+                    musicList.Add(music);
                 }
+
+                sqlConnection.Close();
             }
 
-            return songs;
+            return musicList;
         }
     }
 }

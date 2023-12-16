@@ -17,7 +17,7 @@ namespace Sign_upform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new choose_role());
+            Application.Run(new Homepage_Fan());
         }
     }
 }

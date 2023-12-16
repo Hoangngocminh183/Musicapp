@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sign_upform
 {
-    internal class Song
+    public class Music
     {
         public int SongID { get; set; }
         public string Title { get; set;}

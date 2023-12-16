@@ -48,7 +48,7 @@ namespace Sign_upform
             Form formBackground = new Form();
             try
             {
-                using (Notifications uu = new Notifications())
+                using (Notification_Artist uu = new Notification_Artist())
                 {
                     formBackground.StartPosition = FormStartPosition.Manual;
                     formBackground.FormBorderStyle = FormBorderStyle.None;

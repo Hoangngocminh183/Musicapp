@@ -64,33 +64,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.see_more = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label32 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label42 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.song11 = new Sign_upform.Songs.Song();
-            this.song12 = new Sign_upform.Songs.Song();
-            this.song13 = new Sign_upform.Songs.Song();
-            this.song14 = new Sign_upform.Songs.Song();
-            this.song15 = new Sign_upform.Songs.Song();
-            this.song6 = new Sign_upform.Songs.Song();
-            this.song7 = new Sign_upform.Songs.Song();
-            this.song8 = new Sign_upform.Songs.Song();
-            this.song9 = new Sign_upform.Songs.Song();
-            this.song10 = new Sign_upform.Songs.Song();
-            this.song5 = new Sign_upform.Songs.Song();
-            this.song4 = new Sign_upform.Songs.Song();
-            this.song3 = new Sign_upform.Songs.Song();
-            this.song2 = new Sign_upform.Songs.Song();
-            this.song1 = new Sign_upform.Songs.Song();
-            this.artist1 = new Sign_upform.Playlist.Artist();
-            this.artist2 = new Sign_upform.Playlist.Artist();
-            this.artist3 = new Sign_upform.Playlist.Artist();
-            this.artist4 = new Sign_upform.Playlist.Artist();
-            this.artist5 = new Sign_upform.Playlist.Artist();
-            this.artist6 = new Sign_upform.Playlist.Artist();
+            this.flowLayoutPanelToppicks = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutRecently = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutReleases = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
@@ -113,7 +95,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -518,15 +499,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(20, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 31);
+            this.label3.Size = new System.Drawing.Size(144, 32);
             this.label3.TabIndex = 9;
             this.label3.Tag = "blocks";
             this.label3.Text = "Top picks";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // see_more
             // 
@@ -547,35 +529,26 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(20, 286);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 31);
+            this.label4.Size = new System.Drawing.Size(157, 32);
             this.label4.TabIndex = 20;
             this.label4.Tag = "blocks";
             this.label4.Text = "Top artists";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(0, 1004);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(955, 50);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 27;
-            this.pictureBox11.TabStop = false;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label32.Location = new System.Drawing.Point(20, 469);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(223, 31);
+            this.label32.Size = new System.Drawing.Size(232, 32);
             this.label32.TabIndex = 96;
             this.label32.Tag = "blocks";
             this.label32.Text = "Recently played";
@@ -627,214 +600,56 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.panel2.Controls.Add(this.artist6);
-            this.panel2.Controls.Add(this.artist5);
-            this.panel2.Controls.Add(this.artist4);
-            this.panel2.Controls.Add(this.artist3);
-            this.panel2.Controls.Add(this.artist2);
-            this.panel2.Controls.Add(this.artist1);
-            this.panel2.Controls.Add(this.song11);
-            this.panel2.Controls.Add(this.song12);
-            this.panel2.Controls.Add(this.song13);
-            this.panel2.Controls.Add(this.song14);
-            this.panel2.Controls.Add(this.song15);
-            this.panel2.Controls.Add(this.song6);
-            this.panel2.Controls.Add(this.song7);
-            this.panel2.Controls.Add(this.song8);
-            this.panel2.Controls.Add(this.song9);
-            this.panel2.Controls.Add(this.song10);
-            this.panel2.Controls.Add(this.song5);
-            this.panel2.Controls.Add(this.song4);
-            this.panel2.Controls.Add(this.song3);
-            this.panel2.Controls.Add(this.song2);
-            this.panel2.Controls.Add(this.song1);
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Controls.Add(this.label42);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label32);
-            this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.see_more);
             this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.flowLayoutPanelToppicks);
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
+            this.panel2.Controls.Add(this.flowLayoutRecently);
+            this.panel2.Controls.Add(this.flowLayoutReleases);
             this.panel2.Location = new System.Drawing.Point(210, 79);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(966, 548);
             this.panel2.TabIndex = 138;
             // 
-            // song11
+            // flowLayoutPanelToppicks
             // 
-            this.song11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song11.Location = new System.Drawing.Point(758, 778);
-            this.song11.Name = "song11";
-            this.song11.Size = new System.Drawing.Size(179, 191);
-            this.song11.TabIndex = 143;
+            this.flowLayoutPanelToppicks.Location = new System.Drawing.Point(0, 68);
+            this.flowLayoutPanelToppicks.Name = "flowLayoutPanelToppicks";
+            this.flowLayoutPanelToppicks.Size = new System.Drawing.Size(955, 189);
+            this.flowLayoutPanelToppicks.TabIndex = 7;
             // 
-            // song12
+            // flowLayoutPanel2
             // 
-            this.song12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song12.Location = new System.Drawing.Point(575, 778);
-            this.song12.Name = "song12";
-            this.song12.Size = new System.Drawing.Size(179, 191);
-            this.song12.TabIndex = 142;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 320);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(938, 136);
+            this.flowLayoutPanel2.TabIndex = 8;
             // 
-            // song13
+            // flowLayoutRecently
             // 
-            this.song13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song13.Location = new System.Drawing.Point(391, 778);
-            this.song13.Name = "song13";
-            this.song13.Size = new System.Drawing.Size(179, 191);
-            this.song13.TabIndex = 141;
+            this.flowLayoutRecently.Location = new System.Drawing.Point(3, 503);
+            this.flowLayoutRecently.Name = "flowLayoutRecently";
+            this.flowLayoutRecently.Size = new System.Drawing.Size(938, 219);
+            this.flowLayoutRecently.TabIndex = 9;
             // 
-            // song14
+            // flowLayoutReleases
             // 
-            this.song14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song14.Location = new System.Drawing.Point(208, 778);
-            this.song14.Name = "song14";
-            this.song14.Size = new System.Drawing.Size(179, 191);
-            this.song14.TabIndex = 140;
-            // 
-            // song15
-            // 
-            this.song15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song15.Location = new System.Drawing.Point(26, 778);
-            this.song15.Name = "song15";
-            this.song15.Size = new System.Drawing.Size(179, 191);
-            this.song15.TabIndex = 139;
-            // 
-            // song6
-            // 
-            this.song6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song6.Location = new System.Drawing.Point(758, 517);
-            this.song6.Name = "song6";
-            this.song6.Size = new System.Drawing.Size(179, 191);
-            this.song6.TabIndex = 138;
-            // 
-            // song7
-            // 
-            this.song7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song7.Location = new System.Drawing.Point(575, 517);
-            this.song7.Name = "song7";
-            this.song7.Size = new System.Drawing.Size(179, 191);
-            this.song7.TabIndex = 137;
-            // 
-            // song8
-            // 
-            this.song8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song8.Location = new System.Drawing.Point(391, 517);
-            this.song8.Name = "song8";
-            this.song8.Size = new System.Drawing.Size(179, 191);
-            this.song8.TabIndex = 136;
-            // 
-            // song9
-            // 
-            this.song9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song9.Location = new System.Drawing.Point(208, 517);
-            this.song9.Name = "song9";
-            this.song9.Size = new System.Drawing.Size(179, 191);
-            this.song9.TabIndex = 135;
-            // 
-            // song10
-            // 
-            this.song10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song10.Location = new System.Drawing.Point(26, 517);
-            this.song10.Name = "song10";
-            this.song10.Size = new System.Drawing.Size(179, 191);
-            this.song10.TabIndex = 134;
-            // 
-            // song5
-            // 
-            this.song5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song5.Location = new System.Drawing.Point(758, 68);
-            this.song5.Name = "song5";
-            this.song5.Size = new System.Drawing.Size(179, 191);
-            this.song5.TabIndex = 133;
-            // 
-            // song4
-            // 
-            this.song4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song4.Location = new System.Drawing.Point(575, 68);
-            this.song4.Name = "song4";
-            this.song4.Size = new System.Drawing.Size(179, 191);
-            this.song4.TabIndex = 132;
-            // 
-            // song3
-            // 
-            this.song3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song3.Location = new System.Drawing.Point(391, 68);
-            this.song3.Name = "song3";
-            this.song3.Size = new System.Drawing.Size(179, 191);
-            this.song3.TabIndex = 131;
-            // 
-            // song2
-            // 
-            this.song2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song2.Location = new System.Drawing.Point(208, 68);
-            this.song2.Name = "song2";
-            this.song2.Size = new System.Drawing.Size(179, 191);
-            this.song2.TabIndex = 130;
-            // 
-            // song1
-            // 
-            this.song1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.song1.Location = new System.Drawing.Point(26, 68);
-            this.song1.Name = "song1";
-            this.song1.Size = new System.Drawing.Size(179, 191);
-            this.song1.TabIndex = 7;
-            // 
-            // artist1
-            // 
-            this.artist1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.artist1.Location = new System.Drawing.Point(43, 330);
-            this.artist1.Name = "artist1";
-            this.artist1.Size = new System.Drawing.Size(104, 126);
-            this.artist1.TabIndex = 7;
-            // 
-            // artist2
-            // 
-            this.artist2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.artist2.Location = new System.Drawing.Point(195, 330);
-            this.artist2.Name = "artist2";
-            this.artist2.Size = new System.Drawing.Size(104, 126);
-            this.artist2.TabIndex = 144;
-            // 
-            // artist3
-            // 
-            this.artist3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.artist3.Location = new System.Drawing.Point(348, 330);
-            this.artist3.Name = "artist3";
-            this.artist3.Size = new System.Drawing.Size(104, 126);
-            this.artist3.TabIndex = 145;
-            // 
-            // artist4
-            // 
-            this.artist4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.artist4.Location = new System.Drawing.Point(797, 330);
-            this.artist4.Name = "artist4";
-            this.artist4.Size = new System.Drawing.Size(104, 126);
-            this.artist4.TabIndex = 146;
-            // 
-            // artist5
-            // 
-            this.artist5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.artist5.Location = new System.Drawing.Point(650, 330);
-            this.artist5.Name = "artist5";
-            this.artist5.Size = new System.Drawing.Size(104, 126);
-            this.artist5.TabIndex = 147;
-            // 
-            // artist6
-            // 
-            this.artist6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.artist6.Location = new System.Drawing.Point(503, 330);
-            this.artist6.Name = "artist6";
-            this.artist6.Size = new System.Drawing.Size(104, 126);
-            this.artist6.TabIndex = 148;
+            this.flowLayoutReleases.Location = new System.Drawing.Point(3, 763);
+            this.flowLayoutReleases.Name = "flowLayoutReleases";
+            this.flowLayoutReleases.Size = new System.Drawing.Size(938, 220);
+            this.flowLayoutReleases.TabIndex = 10;
             // 
             // Homepage_Fan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 714);
+            this.ClientSize = new System.Drawing.Size(1156, 714);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.play_bar);
             this.Controls.Add(this.panel1);
@@ -869,7 +684,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -912,32 +726,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel see_more;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Panel panel2;
-        private Songs.Song song11;
-        private Songs.Song song12;
-        private Songs.Song song13;
-        private Songs.Song song14;
-        private Songs.Song song15;
-        private Songs.Song song6;
-        private Songs.Song song7;
-        private Songs.Song song8;
-        private Songs.Song song9;
-        private Songs.Song song10;
-        private Songs.Song song5;
-        private Songs.Song song4;
-        private Songs.Song song3;
-        private Songs.Song song2;
-        private Songs.Song song1;
-        private Playlist.Artist artist6;
-        private Playlist.Artist artist5;
-        private Playlist.Artist artist4;
-        private Playlist.Artist artist3;
-        private Playlist.Artist artist2;
-        private Playlist.Artist artist1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutRecently;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutReleases;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelToppicks;
     }
 }
