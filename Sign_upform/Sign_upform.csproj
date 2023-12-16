@@ -94,6 +94,12 @@
     <Compile Include="forgotpass_form.Designer.cs">
       <DependentUpon>forgotpass_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homepage_Fan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage_Fan.Designer.cs">
+      <DependentUpon>Homepage_Fan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Artists.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forgotpass_form.resx">
       <DependentUpon>forgotpass_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage_Fan.resx">
+      <DependentUpon>Homepage_Fan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Artists.resx">
       <DependentUpon>Login_Artists.cs</DependentUpon>
