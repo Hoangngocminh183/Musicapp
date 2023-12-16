@@ -1163,7 +1163,7 @@
             this.panel2.Location = new System.Drawing.Point(210, 80);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(984, 480);
+            this.panel2.Size = new System.Drawing.Size(969, 480);
             this.panel2.TabIndex = 138;
             // 
             // label10
@@ -1532,7 +1532,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 638);
+            this.ClientSize = new System.Drawing.Size(1177, 639);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.play_bar);
             this.Controls.Add(this.panel1);
