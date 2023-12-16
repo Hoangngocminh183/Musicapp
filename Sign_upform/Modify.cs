@@ -44,5 +44,35 @@ namespace Sign_upform
                 sqlConnection.Close();
             }
         }
+        public List<Song> GetAllSongs()
+        {
+            List<Song> songs = new List<Song>();
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                string query = "SELECT SongId, Title, Artist, FilePath, ImagePath FROM Songs";
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        Song song = new Song
+                        {
+                            SongID = (int)dataReader["SongId"],
+                            Title = dataReader["Title"].ToString(),
+                            Artist = dataReader["Artist"].ToString(),
+                            FilePath = dataReader["FilePath"].ToString(),
+                            ImagePath = dataReader["ImagePath"].ToString(),
+                        };
+
+                        songs.Add(song);
+                    }
+                }
+            }
+
+            return songs;
+        }
     }
 }

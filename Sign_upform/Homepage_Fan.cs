@@ -26,5 +26,40 @@ namespace Sign_upform
         {
 
         }
+
+        private void Play_Pause_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Previous_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureMusic1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleMusic1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Artist1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
