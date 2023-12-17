@@ -1,4 +1,5 @@
 ﻿using Sign_upform.Playlist;
+using Sign_upform.Playmusic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace Sign_upform
             InitializeComponent();
             LoadMusicIntoUserControl();
         }
+      
         private void LoadMusicIntoUserControl()
         {
             List<Music> musicList = modify.GetMusicList();
@@ -32,7 +34,21 @@ namespace Sign_upform
                 musicControl.SetData(music);
 
                 // Thêm User Control vào FlowLayoutPanelToppicks
-                flowLayoutPanelToppicks.Controls.Add(musicControl);   
+                flowLayoutPanelToppicks.Controls.Add(musicControl);
+
+                musicControl.MusicClicked += MusicControl_MusicClicked;
+            }
+        }
+        private void MusicControl_MusicClicked(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện MusicClicked
+            if (sender is ControlMussic musicControl)
+            {
+                // Truy cập đối tượng Music liên kết với control được nhấp
+                Music clickedMusic = musicControl.GetData();
+
+                // Chuyển thông tin đến NowplayingControl
+                nowplayingControl1.SetData(clickedMusic);
             }
         }
         private void pictureBox34_Click(object sender, EventArgs e)
@@ -100,6 +116,21 @@ namespace Sign_upform
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play_bar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void transfer_images_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nowplayingControl1_Load(object sender, EventArgs e)
         {
 
         }
