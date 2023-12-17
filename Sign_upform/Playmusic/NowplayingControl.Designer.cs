@@ -151,7 +151,7 @@
             // heart_active
             // 
             this.heart_active.Image = ((System.Drawing.Image)(resources.GetObject("heart_active.Image")));
-            this.heart_active.Location = new System.Drawing.Point(279, 32);
+            this.heart_active.Location = new System.Drawing.Point(206, 31);
             this.heart_active.Margin = new System.Windows.Forms.Padding(4);
             this.heart_active.Name = "heart_active";
             this.heart_active.Size = new System.Drawing.Size(15, 15);
@@ -243,7 +243,7 @@
             // pictureBox34
             // 
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.Location = new System.Drawing.Point(324, 32);
+            this.pictureBox34.Location = new System.Drawing.Point(251, 31);
             this.pictureBox34.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(15, 15);
@@ -254,7 +254,7 @@
             // pictureBox33
             // 
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(301, 32);
+            this.pictureBox33.Location = new System.Drawing.Point(228, 31);
             this.pictureBox33.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(15, 15);
