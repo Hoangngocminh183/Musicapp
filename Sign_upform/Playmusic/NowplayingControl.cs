@@ -13,7 +13,7 @@ namespace Sign_upform.Playmusic
         private AudioFileReader audioFile;
         private long pausedPosition; // lưu vị trí tạm dừng
         private bool isDragging = false; // Biến để kiểm tra xem ProgressBar có đang được kéo thả hay không
-
+        private int currentMouseX; // Thêm biến để lưu giữ giá trị của mouseX khi kéo thanh ProgressBar
         public NowplayingControl()
         {
             InitializeComponent();
@@ -216,14 +216,31 @@ namespace Sign_upform.Playmusic
             {
                 int totalSeconds = (int)audioFile.TotalTime.TotalSeconds;
 
-                // Tính toán vị trí mới dựa trên tọa độ của con trỏ chuột
-                float newPosition = (float)mouseX / guna2ProgressBar1.Width * totalSeconds;
+                // Calculate the new position based on the mouse cursor's coordinates
+                float newPosition = (float)mouseX / guna2ProgressBar1.Width;
 
-                // Cập nhật giá trị ProgressBar
-                guna2ProgressBar1.Value = (int)newPosition;
+                // Update the ProgressBar value
+                guna2ProgressBar1.Value = (int)(newPosition * 100);
 
-                // Cập nhật hiển thị thời gian khi đang kéo thả
-                labelRealTime.Text = $"{(int)newPosition / 60}:{(int)newPosition % 60:00}";
+                // Update the displayed time while dragging
+                labelRealTime.Text = $"{(int)(newPosition * totalSeconds) / 60}:{(int)(newPosition * totalSeconds) % 60:00}";
+
+                // Check if dragging and update the position in the audioFile
+                if (isDragging)
+                {
+                    // Calculate the new position in seconds
+                    int newPositionInSeconds = (int)(newPosition * totalSeconds);
+
+                    // Calculate the new position in samples
+                    long newPositionInSamples = audioFile.Length * newPositionInSeconds / totalSeconds;
+
+                    // Clamp the new position to be within the valid range
+                    newPositionInSamples = Math.Max(newPositionInSamples, 0);
+                    newPositionInSamples = Math.Min(newPositionInSamples, audioFile.Length - 1);
+
+                    // Move to the new position in the audioFile
+                    audioFile.Position = newPositionInSamples;
+                }
             }
         }
 
@@ -231,7 +248,8 @@ namespace Sign_upform.Playmusic
         private void guna2ProgressBar1_MouseDown(object sender, MouseEventArgs e)
         {
             isDragging = true;
-            UpdateProgressBarPosition(e.X);
+            currentMouseX = e.X; // Gán giá trị cho currentMouseX khi bắt đầu kéo
+            UpdateProgressBarPosition(currentMouseX);
         }
 
         private void guna2ProgressBar1_MouseUp(object sender, MouseEventArgs e)
@@ -241,7 +259,7 @@ namespace Sign_upform.Playmusic
             {
                 // Nếu đang phát nhạc, di chuyển đến vị trí mới
                 int totalSeconds = (int)audioFile.TotalTime.TotalSeconds;
-                int newPosition = (int)((float)e.X / guna2ProgressBar1.Width * totalSeconds);
+                int newPosition = (int)((float)currentMouseX / guna2ProgressBar1.Width * totalSeconds);
 
                 // Tính toán vị trí mới trong audioFile
                 long newPositionInBytes = (long)((float)newPosition / 100 * audioFile.Length);
@@ -257,7 +275,7 @@ namespace Sign_upform.Playmusic
         {
             if (isDragging)
             {
-                UpdateProgressBarPosition(e.X);
+                UpdateProgressBarPosition(e.X); // Cập nhật giá trị khi di chuyển chuột
             }
         }
 
@@ -269,6 +287,13 @@ namespace Sign_upform.Playmusic
         private void labelTotalTime_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Volume_Scroll(object sender, ScrollEventArgs e)
+        {
+            int volumeValue = Volume.Value;
+            float volumeRatio = volumeValue / 100.0f;
+            wavePlayer.Volume = volumeRatio;
         }
     }
 }

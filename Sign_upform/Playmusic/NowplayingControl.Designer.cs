@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NowplayingControl));
             this.TitleArtist = new System.Windows.Forms.Label();
             this.TitleMusic = new System.Windows.Forms.Label();
-            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.Volume = new Guna.UI2.WinForms.Guna2TrackBar();
             this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.labelTotalTime = new System.Windows.Forms.Label();
             this.labelRealTime = new System.Windows.Forms.Label();
@@ -90,17 +90,18 @@
             this.TitleMusic.Text = "Title";
             this.TitleMusic.Click += new System.EventHandler(this.TitleMusic_Click);
             // 
-            // guna2TrackBar1
+            // Volume
             // 
-            this.guna2TrackBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.guna2TrackBar1.HoverState.Parent = this.guna2TrackBar1;
-            this.guna2TrackBar1.Location = new System.Drawing.Point(1066, 29);
-            this.guna2TrackBar1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TrackBar1.Name = "guna2TrackBar1";
-            this.guna2TrackBar1.Size = new System.Drawing.Size(87, 12);
-            this.guna2TrackBar1.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
-            this.guna2TrackBar1.TabIndex = 162;
-            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.White;
+            this.Volume.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.Volume.HoverState.Parent = this.Volume;
+            this.Volume.Location = new System.Drawing.Point(1060, 31);
+            this.Volume.Margin = new System.Windows.Forms.Padding(4);
+            this.Volume.Name = "Volume";
+            this.Volume.Size = new System.Drawing.Size(87, 12);
+            this.Volume.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.Volume.TabIndex = 162;
+            this.Volume.ThumbColor = System.Drawing.Color.White;
+            this.Volume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Volume_Scroll);
             // 
             // guna2ProgressBar1
             // 
@@ -115,7 +116,7 @@
             this.guna2ProgressBar1.Size = new System.Drawing.Size(309, 10);
             this.guna2ProgressBar1.TabIndex = 154;
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar1.Value = 50;
+            this.guna2ProgressBar1.Value = 1;
             this.guna2ProgressBar1.ValueChanged += new System.EventHandler(this.guna2ProgressBar1_ValueChanged);
             this.guna2ProgressBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2ProgressBar1_MouseDown);
             this.guna2ProgressBar1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.guna2ProgressBar1_MouseMove);
@@ -277,7 +278,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.TitleArtist);
             this.Controls.Add(this.TitleMusic);
-            this.Controls.Add(this.guna2TrackBar1);
+            this.Controls.Add(this.Volume);
             this.Controls.Add(this.guna2ProgressBar1);
             this.Controls.Add(this.labelTotalTime);
             this.Controls.Add(this.labelRealTime);
@@ -313,7 +314,7 @@
 
         private System.Windows.Forms.Label TitleArtist;
         private System.Windows.Forms.Label TitleMusic;
-        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
+        private Guna.UI2.WinForms.Guna2TrackBar Volume;
         private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
         private System.Windows.Forms.Label labelTotalTime;
         private System.Windows.Forms.Label labelRealTime;
