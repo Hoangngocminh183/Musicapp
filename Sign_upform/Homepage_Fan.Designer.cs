@@ -110,7 +110,7 @@
             this.panel3.Location = new System.Drawing.Point(213, 1);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(959, 87);
+            this.panel3.Size = new System.Drawing.Size(940, 87);
             this.panel3.TabIndex = 140;
             // 
             // pictureBox30
@@ -260,7 +260,7 @@
             this.see_more.AutoSize = true;
             this.see_more.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.see_more.LinkColor = System.Drawing.Color.White;
-            this.see_more.Location = new System.Drawing.Point(848, 34);
+            this.see_more.Location = new System.Drawing.Point(810, 35);
             this.see_more.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.see_more.Name = "see_more";
             this.see_more.Size = new System.Drawing.Size(89, 20);
@@ -402,16 +402,16 @@
             // nowplayingControl1
             // 
             this.nowplayingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.nowplayingControl1.Location = new System.Drawing.Point(-2, 634);
+            this.nowplayingControl1.Location = new System.Drawing.Point(0, 627);
             this.nowplayingControl1.Name = "nowplayingControl1";
-            this.nowplayingControl1.Size = new System.Drawing.Size(1165, 85);
+            this.nowplayingControl1.Size = new System.Drawing.Size(1165, 75);
             this.nowplayingControl1.TabIndex = 142;
             // 
             // Homepage_Fan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 714);
+            this.ClientSize = new System.Drawing.Size(1151, 714);
             this.Controls.Add(this.nowplayingControl1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using NAudio.Wave;
@@ -14,6 +15,8 @@ namespace Sign_upform.Playmusic
         private long pausedPosition; // lưu vị trí tạm dừng
         private bool isDragging = false; // Biến để kiểm tra xem ProgressBar có đang được kéo thả hay không
         private int currentMouseX; // Thêm biến để lưu giữ giá trị của mouseX khi kéo thanh ProgressBar
+        private bool isLooping = false;
+        private bool isRestarting = false; // Biến để kiểm tra xem có đang khởi động lại từ sự kiện PlaybackStopped không
         public NowplayingControl()
         {
             InitializeComponent();
@@ -33,14 +36,14 @@ namespace Sign_upform.Playmusic
         }
 
         public void SetData(Music music)
-        {
+        {          
             StopMusic();
             // Cập nhật các yếu tố UI trong NowplayingControl với dữ liệu từ ControlMussic được nhấp
             TitleMusic.Text = music.Title;
             TitleArtist.Text = music.Artist;
             transfer_images.ImageLocation = Path.GetFullPath(music.ImagePath);
             filePath = Path.GetFullPath(music.FilePath);
-            PlayMusic();
+           // PlayMusic();
         }
 
         private void PlayMusic()
@@ -65,11 +68,18 @@ namespace Sign_upform.Playmusic
                 {
                     // Ngược lại, phát nhạc mới
                     audioFile = new AudioFileReader(filePath);
+                    // Kiểm tra và đặt thuộc tính lặp lại
+                    if (isLooping)
+                    {
+                        isRestarting = true; // Đánh dấu là đang khởi động lại từ sự kiện PlaybackStopped
+                    }
                     wavePlayer.Init(audioFile);
-                    wavePlayer.Play();
                     isPlaying = true;
                     timer1.Start();
                     timer2.Start();
+                    // Đăng ký sự kiện PlaybackStopped để xử lý việc lặp lại
+                    wavePlayer.PlaybackStopped += WavePlayer_PlaybackStopped;
+                    wavePlayer.Play();
                 }
             }
             catch (Exception ex)
@@ -98,6 +108,11 @@ namespace Sign_upform.Playmusic
             if (wavePlayer.PlaybackState == PlaybackState.Playing)
             {
                 wavePlayer.Stop();
+                // Đảm bảo rằng việc dừng nhạc đã hoàn thành
+                while (wavePlayer.PlaybackState != PlaybackState.Stopped)
+                {
+                    System.Threading.Thread.Sleep(100);
+                }
             }
 
             if (audioFile != null)
@@ -227,19 +242,12 @@ namespace Sign_upform.Playmusic
 
                 // Check if dragging and update the position in the audioFile
                 if (isDragging)
-                {
+                {             
                     // Calculate the new position in seconds
                     int newPositionInSeconds = (int)(newPosition * totalSeconds);
 
-                    // Calculate the new position in samples
-                    long newPositionInSamples = audioFile.Length * newPositionInSeconds / totalSeconds;
-
-                    // Clamp the new position to be within the valid range
-                    newPositionInSamples = Math.Max(newPositionInSamples, 0);
-                    newPositionInSamples = Math.Min(newPositionInSamples, audioFile.Length - 1);
-
                     // Move to the new position in the audioFile
-                    audioFile.Position = newPositionInSamples;
+                    audioFile.CurrentTime = TimeSpan.FromSeconds(newPositionInSeconds);
                 }
             }
         }
@@ -257,17 +265,15 @@ namespace Sign_upform.Playmusic
             isDragging = false;
             if (audioFile != null && isPlaying)
             {
-                // Nếu đang phát nhạc, di chuyển đến vị trí mới
+                // Calculate the new position based on the mouse cursor's coordinates
+                float newPosition = (float)e.X / guna2ProgressBar1.Width;
+
+                // Calculate the new position in seconds
                 int totalSeconds = (int)audioFile.TotalTime.TotalSeconds;
-                int newPosition = (int)((float)currentMouseX / guna2ProgressBar1.Width * totalSeconds);
+                int newPositionInSeconds = (int)(newPosition * totalSeconds);
 
-                // Tính toán vị trí mới trong audioFile
-                long newPositionInBytes = (long)((float)newPosition / 100 * audioFile.Length);
-
-                newPositionInBytes = Math.Max(newPositionInBytes, 0);
-                newPositionInBytes = Math.Min(newPositionInBytes, audioFile.Length - 1);
-                // Di chuyển đến vị trí mới
-                audioFile.Position = newPositionInBytes;
+                // Move to the new position in the audioFile
+                audioFile.CurrentTime = TimeSpan.FromSeconds(newPositionInSeconds);
             }
         }
 
@@ -295,5 +301,35 @@ namespace Sign_upform.Playmusic
             float volumeRatio = volumeValue / 100.0f;
             wavePlayer.Volume = volumeRatio;
         }
+        private void WavePlayer_PlaybackStopped(object sender, StoppedEventArgs e)
+        {
+            // Kiểm tra nếu phát nhạc dừng tự nhiên (không phải do phương thức StopMusic)
+            if (e.Exception == null && isLooping && !isRestarting)
+            {
+                // Nếu lặp lại được kích hoạt và không phải đang khởi động lại, phát lại nhạc
+                PlayMusic();
+            }
+
+            // Đặt lại biến đánh dấu khởi động lại
+            isRestarting = false;
+        }
+        private void loop_Click(object sender, EventArgs e)
+        {
+            // Toggle the looping state
+            isLooping = !isLooping;
+
+            // Update UI to reflect the looping state
+            if (isLooping)
+            {
+                // Set a visual indication that looping is enabled (you can customize this based on your UI)
+                MusicLoop.BackColor = Color.Green; // For example, set the background color to green
+            }
+            else
+            {
+                // Set a visual indication that looping is disabled
+                MusicLoop.BackColor = SystemColors.Control; // Reset the background color to the default
+            }
+        }
+
     }
 }

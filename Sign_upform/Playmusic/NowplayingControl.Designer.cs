@@ -40,7 +40,7 @@
             this.transfer_images = new System.Windows.Forms.PictureBox();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.play_pause = new System.Windows.Forms.PictureBox();
-            this.pictureBox38 = new System.Windows.Forms.PictureBox();
+            this.MusicLoop = new System.Windows.Forms.PictureBox();
             this.Next = new System.Windows.Forms.PictureBox();
             this.previous = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.transfer_images)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.play_pause)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MusicLoop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
@@ -194,16 +194,17 @@
             this.play_pause.TabStop = false;
             this.play_pause.Click += new System.EventHandler(this.play_pause_Click);
             // 
-            // pictureBox38
+            // MusicLoop
             // 
-            this.pictureBox38.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox38.Image")));
-            this.pictureBox38.Location = new System.Drawing.Point(544, 32);
-            this.pictureBox38.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(16, 15);
-            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox38.TabIndex = 156;
-            this.pictureBox38.TabStop = false;
+            this.MusicLoop.Image = ((System.Drawing.Image)(resources.GetObject("MusicLoop.Image")));
+            this.MusicLoop.Location = new System.Drawing.Point(544, 32);
+            this.MusicLoop.Margin = new System.Windows.Forms.Padding(4);
+            this.MusicLoop.Name = "MusicLoop";
+            this.MusicLoop.Size = new System.Drawing.Size(16, 15);
+            this.MusicLoop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.MusicLoop.TabIndex = 156;
+            this.MusicLoop.TabStop = false;
+            this.MusicLoop.Click += new System.EventHandler(this.loop_Click);
             // 
             // Next
             // 
@@ -286,7 +287,7 @@
             this.Controls.Add(this.transfer_images);
             this.Controls.Add(this.pictureBox40);
             this.Controls.Add(this.play_pause);
-            this.Controls.Add(this.pictureBox38);
+            this.Controls.Add(this.MusicLoop);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.previous);
             this.Controls.Add(this.pictureBox35);
@@ -299,7 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.transfer_images)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.play_pause)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MusicLoop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
@@ -322,7 +323,7 @@
         private System.Windows.Forms.PictureBox transfer_images;
         private System.Windows.Forms.PictureBox pictureBox40;
         private System.Windows.Forms.PictureBox play_pause;
-        private System.Windows.Forms.PictureBox pictureBox38;
+        private System.Windows.Forms.PictureBox MusicLoop;
         private System.Windows.Forms.PictureBox Next;
         private System.Windows.Forms.PictureBox previous;
         private System.Windows.Forms.PictureBox pictureBox35;
