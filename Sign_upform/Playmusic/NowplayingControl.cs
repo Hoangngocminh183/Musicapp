@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -17,6 +18,9 @@ namespace Sign_upform.Playmusic
         private int currentMouseX; // Thêm biến để lưu giữ giá trị của mouseX khi kéo thanh ProgressBar
         private bool isLooping = false;
         private bool isRestarting = false; // Biến để kiểm tra xem có đang khởi động lại từ sự kiện PlaybackStopped không
+        private List<Music> playlist = new List<Music>(); // Danh sách bài hát
+        private int currentSongIndex = -1; // Chỉ số của bài hát hiện tại trong danh sách
+
         public NowplayingControl()
         {
             InitializeComponent();
@@ -43,8 +47,26 @@ namespace Sign_upform.Playmusic
             TitleArtist.Text = music.Artist;
             transfer_images.ImageLocation = Path.GetFullPath(music.ImagePath);
             filePath = Path.GetFullPath(music.FilePath);
-           // PlayMusic();
+            // PlayMusic();
+
+           
         }
+        public void AddToPlaylist(Music music)
+    {
+        // Nếu danh sách trống, thêm bài hát hiện tại vào danh sách và đặt currentSongIndex
+        if (playlist.Count == 0)
+        {
+            playlist.Add(music);
+            currentSongIndex = 0;
+        }
+        // Nếu danh sách không trống, kiểm tra xem bài hát đã có trong danh sách hay chưa
+        // Nếu chưa có, thêm vào danh sách và đặt currentSongIndex
+        else if (!playlist.Contains(music))
+        {
+            playlist.Add(music);
+            currentSongIndex = playlist.IndexOf(music);
+        }
+    }
 
         private void PlayMusic()
         {
@@ -161,12 +183,28 @@ namespace Sign_upform.Playmusic
 
         private void Next_Click(object sender, EventArgs e)
         {
-
+            // Chuyển sang bài hát tiếp theo trong danh sách
+            if (playlist.Count > 0)
+            {
+                currentSongIndex++;
+                // Kiểm tra xem đã hết danh sách bài hát chưa
+                if (currentSongIndex >= playlist.Count)
+                {
+                    // Nếu đã hết, quay lại bài hát đầu danh sách
+                    currentSongIndex = 0;
+                }
+                SetData(playlist[currentSongIndex]);
+            }
         }
 
         private void previous_Click(object sender, EventArgs e)
         {
-
+            // Chuyển đến bài hát trước đó trong danh sách
+            if (playlist.Count > 1 && currentSongIndex > 0)
+            {
+                currentSongIndex--;
+                SetData(playlist[currentSongIndex]);
+            }
         }
 
         private void NowplayingControl_Load(object sender, EventArgs e)

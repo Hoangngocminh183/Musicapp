@@ -406,6 +406,7 @@
             this.nowplayingControl1.Name = "nowplayingControl1";
             this.nowplayingControl1.Size = new System.Drawing.Size(1165, 75);
             this.nowplayingControl1.TabIndex = 142;
+            this.nowplayingControl1.Load += new System.EventHandler(this.nowplayingControl1_Load_1);
             // 
             // Homepage_Fan
             // 

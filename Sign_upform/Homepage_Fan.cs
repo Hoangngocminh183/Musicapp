@@ -37,6 +37,8 @@ namespace Sign_upform
                 flowLayoutPanelToppicks.Controls.Add(musicControl);
 
                 musicControl.MusicClicked += MusicControl_MusicClicked;
+                // Thêm bài hát vào danh sách playlist trong NowplayingControl
+                nowplayingControl1.AddToPlaylist(music);
             }
         }
         private void MusicControl_MusicClicked(object sender, EventArgs e)
@@ -131,6 +133,11 @@ namespace Sign_upform
         }
 
         private void nowplayingControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nowplayingControl1_Load_1(object sender, EventArgs e)
         {
 
         }
