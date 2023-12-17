@@ -87,7 +87,7 @@
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureMusic);
             this.Name = "ControlMussic";
-            this.Size = new System.Drawing.Size(179, 185);
+            this.Size = new System.Drawing.Size(178, 185);
             this.Load += new System.EventHandler(this.ControlMussic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureMusic)).EndInit();
             this.ResumeLayout(false);

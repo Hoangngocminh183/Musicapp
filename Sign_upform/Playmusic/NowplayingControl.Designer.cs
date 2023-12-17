@@ -107,13 +107,13 @@
             // 
             this.guna2ProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(662, 33);
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(662, 36);
             this.guna2ProgressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
             this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.White;
             this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.White;
             this.guna2ProgressBar1.ShadowDecoration.Parent = this.guna2ProgressBar1;
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(309, 10);
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(309, 4);
             this.guna2ProgressBar1.TabIndex = 154;
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ProgressBar1.Value = 1;
@@ -188,8 +188,8 @@
             this.play_pause.Location = new System.Drawing.Point(447, 23);
             this.play_pause.Margin = new System.Windows.Forms.Padding(4);
             this.play_pause.Name = "play_pause";
-            this.play_pause.Size = new System.Drawing.Size(28, 28);
-            this.play_pause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.play_pause.Size = new System.Drawing.Size(31, 29);
+            this.play_pause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.play_pause.TabIndex = 157;
             this.play_pause.TabStop = false;
             this.play_pause.Click += new System.EventHandler(this.play_pause_Click);
