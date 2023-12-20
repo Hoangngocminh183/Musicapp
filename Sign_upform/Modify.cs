@@ -78,7 +78,7 @@ namespace Sign_upform
         public List<Music> GetNewReleases()
         {
             List<Music> newReleases = new List<Music>();
-            string query = "SELECT SongID, Title, Artist, FilePath, ImagePath, SongCode FROM Songs ORDER BY SongCode DESC";
+            string query = "SELECT SongID, Title, Artist, FilePath, ImagePath, SongCode FROM Songs ORDER BY CASE WHEN ISNUMERIC(SongCode) = 1 THEN CAST(SongCode AS INT) ELSE 999999 END DESC, SongID DESC";
 
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {

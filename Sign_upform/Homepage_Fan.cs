@@ -107,7 +107,7 @@ namespace Sign_upform
             {
                 ControlMussic musicControl = new ControlMussic();
                 musicControl.SetData(music);
-                flowReleases.Controls.Add(musicControl);
+                flowReleases.Controls.Add(musicControl); // Thêm vào cuối danh sách
                 musicControl.MusicClicked += MusicControl_MusicClicked; // Đăng ký sự kiện
             }
         }
