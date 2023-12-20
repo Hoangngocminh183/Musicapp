@@ -84,7 +84,8 @@ namespace Sign_upform.Playmusic
                     // Tiếp tục từ vị trí tạm dừng
                     audioFile = new AudioFileReader(filePath);
                     audioFile.Position = pausedPosition;
-                    pausedPosition = 0;
+                    wavePlayer.Init(audioFile);
+                    pausedPosition = 0; // Reset giá trị vị trí tạm dừng sau khi sử dụng
                 }
                 else
                 {
@@ -96,13 +97,16 @@ namespace Sign_upform.Playmusic
                         isRestarting = true; // Đánh dấu là đang khởi động lại từ sự kiện PlaybackStopped
                     }
                     wavePlayer.Init(audioFile);
+                }
                     isPlaying = true;
                     timer1.Start();
                     timer2.Start();
                     // Đăng ký sự kiện PlaybackStopped để xử lý việc lặp lại
                     wavePlayer.PlaybackStopped += WavePlayer_PlaybackStopped;
+
+                    // Start playing from the current position
                     wavePlayer.Play();
-                }
+                
             }
             catch (Exception ex)
             {
@@ -130,15 +134,11 @@ namespace Sign_upform.Playmusic
             if (wavePlayer.PlaybackState == PlaybackState.Playing)
             {
                 wavePlayer.Stop();
-                // Đảm bảo rằng việc dừng nhạc đã hoàn thành
-                while (wavePlayer.PlaybackState != PlaybackState.Stopped)
-                {
-                    System.Threading.Thread.Sleep(100);
-                }
+                
             }
 
             if (audioFile != null)
-            {
+            {            
                 audioFile.Dispose();
                 audioFile = null;
             }
