@@ -157,6 +157,7 @@ namespace Sign_upform.Playmusic
             }
             else
             {
+
                 PlayMusic();
             }
         }
@@ -165,12 +166,27 @@ namespace Sign_upform.Playmusic
         {
 
         }
-
+        // Phương thức để cắt bớt chuỗi và thêm dấu "..."
+        private string TruncateStringWithEllipsis(string input, int maxLength)
+        {
+            if (input.Length > maxLength)
+            {
+                return input.Substring(0, maxLength) + "...";
+            }
+            return input;
+        }
         private void TitleMusic_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+        private void TitleMusic_TextChanged(object sender, EventArgs e)
+        {
+            if (TitleMusic.Text.Length > 7)
+            {
+                // Nếu số ký tự vượt quá giới hạn, cắt chuỗi và thêm dấu "..."
+                TitleMusic.Text = TruncateStringWithEllipsis(TitleMusic.Text, 7);
+            }
+        }
         private void TitleArtist_Click(object sender, EventArgs e)
         {
 
@@ -369,5 +385,6 @@ namespace Sign_upform.Playmusic
             }
         }
 
+        
     }
 }

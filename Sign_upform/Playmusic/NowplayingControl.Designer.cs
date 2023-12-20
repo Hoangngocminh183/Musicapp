@@ -66,10 +66,9 @@
             this.TitleArtist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TitleArtist.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.TitleArtist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.TitleArtist.Location = new System.Drawing.Point(103, 36);
-            this.TitleArtist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TitleArtist.Location = new System.Drawing.Point(77, 22);
             this.TitleArtist.Name = "TitleArtist";
-            this.TitleArtist.Size = new System.Drawing.Size(36, 16);
+            this.TitleArtist.Size = new System.Drawing.Size(30, 13);
             this.TitleArtist.TabIndex = 149;
             this.TitleArtist.Tag = "blocks";
             this.TitleArtist.Text = "Artist";
@@ -79,25 +78,24 @@
             // 
             this.TitleMusic.AutoSize = true;
             this.TitleMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TitleMusic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TitleMusic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.TitleMusic.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TitleMusic.Location = new System.Drawing.Point(102, 6);
-            this.TitleMusic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TitleMusic.Location = new System.Drawing.Point(77, 2);
             this.TitleMusic.Name = "TitleMusic";
-            this.TitleMusic.Size = new System.Drawing.Size(46, 20);
+            this.TitleMusic.Size = new System.Drawing.Size(35, 15);
             this.TitleMusic.TabIndex = 150;
             this.TitleMusic.Tag = "blocks";
             this.TitleMusic.Text = "Title";
+            this.TitleMusic.TextChanged += new System.EventHandler(this.TitleMusic_TextChanged);
             this.TitleMusic.Click += new System.EventHandler(this.TitleMusic_Click);
             // 
             // Volume
             // 
             this.Volume.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.Volume.HoverState.Parent = this.Volume;
-            this.Volume.Location = new System.Drawing.Point(1060, 31);
-            this.Volume.Margin = new System.Windows.Forms.Padding(4);
+            this.Volume.Location = new System.Drawing.Point(795, 25);
             this.Volume.Name = "Volume";
-            this.Volume.Size = new System.Drawing.Size(87, 12);
+            this.Volume.Size = new System.Drawing.Size(65, 10);
             this.Volume.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
             this.Volume.TabIndex = 162;
             this.Volume.ThumbColor = System.Drawing.Color.White;
@@ -107,13 +105,12 @@
             // 
             this.guna2ProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(662, 36);
-            this.guna2ProgressBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(496, 29);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
             this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.White;
             this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.White;
             this.guna2ProgressBar1.ShadowDecoration.Parent = this.guna2ProgressBar1;
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(309, 4);
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(232, 3);
             this.guna2ProgressBar1.TabIndex = 154;
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ProgressBar1.Value = 1;
@@ -127,10 +124,9 @@
             this.labelTotalTime.AutoSize = true;
             this.labelTotalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.labelTotalTime.Location = new System.Drawing.Point(974, 29);
-            this.labelTotalTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTotalTime.Location = new System.Drawing.Point(730, 24);
             this.labelTotalTime.Name = "labelTotalTime";
-            this.labelTotalTime.Size = new System.Drawing.Size(55, 20);
+            this.labelTotalTime.Size = new System.Drawing.Size(43, 16);
             this.labelTotalTime.TabIndex = 161;
             this.labelTotalTime.Text = "00:00";
             this.labelTotalTime.Click += new System.EventHandler(this.labelTotalTime_Click);
@@ -140,10 +136,9 @@
             this.labelRealTime.AutoSize = true;
             this.labelRealTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRealTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelRealTime.Location = new System.Drawing.Point(599, 29);
-            this.labelRealTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRealTime.Location = new System.Drawing.Point(449, 24);
             this.labelRealTime.Name = "labelRealTime";
-            this.labelRealTime.Size = new System.Drawing.Size(55, 20);
+            this.labelRealTime.Size = new System.Drawing.Size(43, 16);
             this.labelRealTime.TabIndex = 160;
             this.labelRealTime.Text = "00:00";
             this.labelRealTime.Click += new System.EventHandler(this.labelRealTime_Click);
@@ -151,8 +146,7 @@
             // heart_active
             // 
             this.heart_active.Image = ((System.Drawing.Image)(resources.GetObject("heart_active.Image")));
-            this.heart_active.Location = new System.Drawing.Point(206, 31);
-            this.heart_active.Margin = new System.Windows.Forms.Padding(4);
+            this.heart_active.Location = new System.Drawing.Point(154, 25);
             this.heart_active.Name = "heart_active";
             this.heart_active.Size = new System.Drawing.Size(15, 15);
             this.heart_active.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -162,10 +156,9 @@
             // transfer_images
             // 
             this.transfer_images.BackColor = System.Drawing.Color.Transparent;
-            this.transfer_images.Location = new System.Drawing.Point(11, 3);
-            this.transfer_images.Margin = new System.Windows.Forms.Padding(4);
+            this.transfer_images.Location = new System.Drawing.Point(8, 2);
             this.transfer_images.Name = "transfer_images";
-            this.transfer_images.Size = new System.Drawing.Size(84, 78);
+            this.transfer_images.Size = new System.Drawing.Size(63, 63);
             this.transfer_images.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.transfer_images.TabIndex = 151;
             this.transfer_images.TabStop = false;
@@ -174,8 +167,7 @@
             // pictureBox40
             // 
             this.pictureBox40.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox40.Image")));
-            this.pictureBox40.Location = new System.Drawing.Point(1038, 32);
-            this.pictureBox40.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox40.Location = new System.Drawing.Point(778, 26);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(14, 11);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -185,10 +177,9 @@
             // play_pause
             // 
             this.play_pause.Image = ((System.Drawing.Image)(resources.GetObject("play_pause.Image")));
-            this.play_pause.Location = new System.Drawing.Point(447, 23);
-            this.play_pause.Margin = new System.Windows.Forms.Padding(4);
+            this.play_pause.Location = new System.Drawing.Point(335, 19);
             this.play_pause.Name = "play_pause";
-            this.play_pause.Size = new System.Drawing.Size(31, 29);
+            this.play_pause.Size = new System.Drawing.Size(23, 24);
             this.play_pause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.play_pause.TabIndex = 157;
             this.play_pause.TabStop = false;
@@ -197,8 +188,7 @@
             // MusicLoop
             // 
             this.MusicLoop.Image = ((System.Drawing.Image)(resources.GetObject("MusicLoop.Image")));
-            this.MusicLoop.Location = new System.Drawing.Point(544, 32);
-            this.MusicLoop.Margin = new System.Windows.Forms.Padding(4);
+            this.MusicLoop.Location = new System.Drawing.Point(408, 26);
             this.MusicLoop.Name = "MusicLoop";
             this.MusicLoop.Size = new System.Drawing.Size(16, 15);
             this.MusicLoop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -209,8 +199,7 @@
             // Next
             // 
             this.Next.Image = ((System.Drawing.Image)(resources.GetObject("Next.Image")));
-            this.Next.Location = new System.Drawing.Point(504, 32);
-            this.Next.Margin = new System.Windows.Forms.Padding(4);
+            this.Next.Location = new System.Drawing.Point(378, 26);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(15, 15);
             this.Next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -221,8 +210,7 @@
             // previous
             // 
             this.previous.Image = ((System.Drawing.Image)(resources.GetObject("previous.Image")));
-            this.previous.Location = new System.Drawing.Point(407, 32);
-            this.previous.Margin = new System.Windows.Forms.Padding(4);
+            this.previous.Location = new System.Drawing.Point(305, 26);
             this.previous.Name = "previous";
             this.previous.Size = new System.Drawing.Size(15, 15);
             this.previous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -233,8 +221,7 @@
             // pictureBox35
             // 
             this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(368, 32);
-            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox35.Location = new System.Drawing.Point(276, 26);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(15, 15);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -244,8 +231,7 @@
             // pictureBox34
             // 
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.Location = new System.Drawing.Point(251, 31);
-            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox34.Location = new System.Drawing.Point(188, 25);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(15, 15);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -255,8 +241,7 @@
             // pictureBox33
             // 
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(228, 31);
-            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox33.Location = new System.Drawing.Point(171, 25);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(15, 15);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -274,7 +259,7 @@
             // 
             // NowplayingControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.TitleArtist);
@@ -293,8 +278,9 @@
             this.Controls.Add(this.pictureBox35);
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.pictureBox33);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NowplayingControl";
-            this.Size = new System.Drawing.Size(1165, 85);
+            this.Size = new System.Drawing.Size(874, 69);
             this.Load += new System.EventHandler(this.NowplayingControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.heart_active)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transfer_images)).EndInit();

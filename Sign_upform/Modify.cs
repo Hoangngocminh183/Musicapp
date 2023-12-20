@@ -63,7 +63,8 @@ namespace Sign_upform
                         Title = dataReader.GetString(1),
                         Artist = dataReader.GetString(2),
                         FilePath = dataReader.GetString(3),
-                        ImagePath = dataReader.GetString(4)
+                        ImagePath = dataReader.GetString(4),
+                 
                     };
 
                     musicList.Add(music);
@@ -74,5 +75,37 @@ namespace Sign_upform
 
             return musicList;
         }
+        public List<Music> GetNewReleases()
+        {
+            List<Music> newReleases = new List<Music>();
+            string query = "SELECT SongID, Title, Artist, FilePath, ImagePath, SongCode FROM Songs ORDER BY SongCode DESC";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    Music music = new Music
+                    {
+                        SongID = dataReader.GetInt32(0),
+                        Title = dataReader.GetString(1),
+                        Artist = dataReader.GetString(2),
+                        FilePath = dataReader.GetString(3),
+                        ImagePath = dataReader.GetString(4),
+                        SongCode = dataReader.GetString(5),
+                    };
+
+                    newReleases.Add(music);
+                }
+
+                sqlConnection.Close();
+            }
+
+            return newReleases;
+        }
+
     }
 }

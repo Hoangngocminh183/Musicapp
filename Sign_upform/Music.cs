@@ -13,6 +13,7 @@ namespace Sign_upform
         public string Artist {  get; set; }
         public string FilePath {  get; set; }
         public string ImagePath { get; set; }
+        public string SongCode { get; set; }
 
     }
 }

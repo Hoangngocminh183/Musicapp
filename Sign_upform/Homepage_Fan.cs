@@ -19,6 +19,7 @@ namespace Sign_upform
         {
             InitializeComponent();
             LoadMusicIntoUserControl();
+            LoadNewReleasesIntoUserControl();
         }
       
         private void LoadMusicIntoUserControl()
@@ -51,8 +52,67 @@ namespace Sign_upform
 
                 // Chuyển thông tin đến NowplayingControl
                 nowplayingControl1.SetData(clickedMusic);
+
+                // Kiểm tra xem musicControl đã tồn tại trong recentlyPlayedControls chưa
+                ControlMussic existingControl = recentlyPlayedControls.FirstOrDefault(control => control.GetData().Equals(clickedMusic));
+
+                if (existingControl == null)
+                {
+                    // Tạo một bản sao mới của ControlMussic để thêm vào recentlyPlayedControls
+                    ControlMussic recentlyPlayedControlCopy = new ControlMussic();
+                    recentlyPlayedControlCopy.SetData(clickedMusic);
+
+                    // Thêm vào recentlyPlayedControls
+                    recentlyPlayedControls.Insert(0, recentlyPlayedControlCopy);
+
+                    // Nếu danh sách đã đầy, xóa phần tử cuối cùng
+                    if (recentlyPlayedControls.Count > 5)
+                    {
+                        recentlyPlayedControls.RemoveAt(recentlyPlayedControls.Count - 1);
+                    }
+
+                    // Cập nhật giao diện cho FlowLayoutRecently
+                    UpdateRecentlyPlayedControls();
+                }
             }
         }
+        private List<ControlMussic> recentlyPlayedControls = new List<ControlMussic>();
+
+        private void UpdateRecentlyPlayedControls()
+        {
+            flowLayoutRecently.Controls.Clear();
+
+            foreach (ControlMussic musicControl in recentlyPlayedControls)
+            {
+                flowLayoutRecently.Controls.Add(musicControl);
+
+                // Đăng ký sự kiện cho việc nhấn vào musicControl trong FlowLayoutRecently
+                musicControl.MusicClicked += RecentlyPlayedMusicControl_Clicked;
+            }
+        }
+        private void RecentlyPlayedMusicControl_Clicked(object sender, EventArgs e)
+        {
+            if (sender is ControlMussic musicControl)
+            {
+                Music clickedMusic = musicControl.GetData();
+                nowplayingControl1.SetData(clickedMusic); // Chuyển thông tin đến NowplayingControl
+            }
+        }
+
+        private void LoadNewReleasesIntoUserControl()
+        {
+            List<Music> newReleases = modify.GetNewReleases();
+
+            foreach (Music music in newReleases)
+            {
+                ControlMussic musicControl = new ControlMussic();
+                musicControl.SetData(music);
+                flowReleases.Controls.Add(musicControl);
+                musicControl.MusicClicked += MusicControl_MusicClicked; // Đăng ký sự kiện
+            }
+        }
+
+
         private void pictureBox34_Click(object sender, EventArgs e)
         {
 
@@ -138,6 +198,51 @@ namespace Sign_upform
         }
 
         private void nowplayingControl1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void see_more_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutRecently_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanelToppicks_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutNewReleases_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -54,5 +54,22 @@ namespace Sign_upform.Playlist
         {
 
         }
+        private string TruncateStringWithEllipsis(string input, int maxLength)
+        {
+            if (input.Length > maxLength)
+            {
+                return input.Substring(0, maxLength) + "...";
+            }
+            return input;
+        }
+        private void labelTitle_TextChanged(object sender, EventArgs e)
+        {
+
+            if (labelTitle.Text.Length > 12)
+            {
+                // Nếu số ký tự vượt quá giới hạn, cắt chuỗi và thêm dấu "..."
+                labelTitle.Text = TruncateStringWithEllipsis(labelTitle.Text, 12);
+            }
+        }
     }
 }

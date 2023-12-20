@@ -43,20 +43,21 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.InspiroMix = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.see_more = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label42 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelToppicks = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutRecently = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutReleases = new System.Windows.Forms.FlowLayoutPanel();
             this.disable_bar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.nowplayingControl1 = new Sign_upform.Playmusic.NowplayingControl();
+            this.see_more = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanelToppicks = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.flowLayoutRecently = new System.Windows.Forms.FlowLayoutPanel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowReleases = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -67,8 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -78,10 +80,9 @@
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(207)))), ((int)(((byte)(207)))));
-            this.textBox1.Location = new System.Drawing.Point(128, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(96, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(451, 19);
+            this.textBox1.Size = new System.Drawing.Size(338, 15);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Let\'s search your tune...";
             // 
@@ -91,10 +92,9 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(47, 144);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(35, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 17);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "My Library";
             // 
@@ -107,10 +107,9 @@
             this.panel3.Controls.Add(this.pictureBox27);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(213, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(158, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(940, 87);
+            this.panel3.Size = new System.Drawing.Size(716, 71);
             this.panel3.TabIndex = 140;
             // 
             // pictureBox30
@@ -118,10 +117,9 @@
             this.pictureBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
             this.pictureBox30.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(884, 24);
-            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox30.Location = new System.Drawing.Point(663, 20);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox30.Size = new System.Drawing.Size(32, 32);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 5;
             this.pictureBox30.TabStop = false;
@@ -131,10 +129,9 @@
             this.pictureBox29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
             this.pictureBox29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(829, 26);
-            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox29.Location = new System.Drawing.Point(622, 21);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox29.Size = new System.Drawing.Size(32, 32);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox29.TabIndex = 4;
             this.pictureBox29.TabStop = false;
@@ -144,10 +141,9 @@
             this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox28.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(59, 34);
-            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox28.Location = new System.Drawing.Point(44, 28);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox28.Size = new System.Drawing.Size(16, 16);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 3;
             this.pictureBox28.TabStop = false;
@@ -157,10 +153,9 @@
             this.pictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(23, 34);
-            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox27.Location = new System.Drawing.Point(17, 28);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 2;
             this.pictureBox27.TabStop = false;
@@ -169,10 +164,9 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(89, 25);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(67, 20);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(731, 39);
+            this.pictureBox4.Size = new System.Drawing.Size(548, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -183,10 +177,9 @@
             this.Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home.ForeColor = System.Drawing.Color.White;
-            this.Home.Location = new System.Drawing.Point(47, 102);
-            this.Home.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Home.Location = new System.Drawing.Point(35, 83);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(49, 17);
+            this.Home.Size = new System.Drawing.Size(39, 13);
             this.Home.TabIndex = 5;
             this.Home.Text = "Home";
             // 
@@ -199,9 +192,8 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.InspiroMix);
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 635);
+            this.panel1.Size = new System.Drawing.Size(160, 516);
             this.panel1.TabIndex = 139;
             // 
             // pictureBox3
@@ -209,10 +201,9 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(24, 101);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(18, 82);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox3.Size = new System.Drawing.Size(18, 20);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
@@ -221,8 +212,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(24, 143);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(18, 116);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(15, 15);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -233,26 +223,51 @@
             // 
             this.InspiroMix.BackColor = System.Drawing.Color.Transparent;
             this.InspiroMix.Image = ((System.Drawing.Image)(resources.GetObject("InspiroMix.Image")));
-            this.InspiroMix.Location = new System.Drawing.Point(24, 22);
-            this.InspiroMix.Margin = new System.Windows.Forms.Padding(4);
+            this.InspiroMix.Location = new System.Drawing.Point(18, 18);
             this.InspiroMix.Name = "InspiroMix";
-            this.InspiroMix.Size = new System.Drawing.Size(112, 25);
+            this.InspiroMix.Size = new System.Drawing.Size(84, 20);
             this.InspiroMix.TabIndex = 1;
             this.InspiroMix.TabStop = false;
             // 
-            // label3
+            // disable_bar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(20, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 32);
-            this.label3.TabIndex = 9;
-            this.label3.Tag = "blocks";
-            this.label3.Text = "Top picks";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.disable_bar.Image = ((System.Drawing.Image)(resources.GetObject("disable_bar.Image")));
+            this.disable_bar.Location = new System.Drawing.Point(-2, 455);
+            this.disable_bar.Name = "disable_bar";
+            this.disable_bar.Size = new System.Drawing.Size(878, 54);
+            this.disable_bar.TabIndex = 141;
+            this.disable_bar.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.panel2.Controls.Add(this.linkLabel2);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.linkLabel1);
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.flowLayoutRecently);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
+            this.panel2.Controls.Add(this.see_more);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.flowLayoutPanelToppicks);
+            this.panel2.Location = new System.Drawing.Point(158, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(718, 445);
+            this.panel2.TabIndex = 138;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // nowplayingControl1
+            // 
+            this.nowplayingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.nowplayingControl1.Location = new System.Drawing.Point(-2, 514);
+            this.nowplayingControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.nowplayingControl1.Name = "nowplayingControl1";
+            this.nowplayingControl1.Size = new System.Drawing.Size(878, 66);
+            this.nowplayingControl1.TabIndex = 142;
+            this.nowplayingControl1.Load += new System.EventHandler(this.nowplayingControl1_Load_1);
             // 
             // see_more
             // 
@@ -260,14 +275,34 @@
             this.see_more.AutoSize = true;
             this.see_more.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.see_more.LinkColor = System.Drawing.Color.White;
-            this.see_more.Location = new System.Drawing.Point(810, 35);
-            this.see_more.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.see_more.Location = new System.Drawing.Point(615, 54);
             this.see_more.Name = "see_more";
-            this.see_more.Size = new System.Drawing.Size(89, 20);
-            this.see_more.TabIndex = 10;
+            this.see_more.Size = new System.Drawing.Size(74, 16);
+            this.see_more.TabIndex = 128;
             this.see_more.TabStop = true;
             this.see_more.Tag = "blocks";
             this.see_more.Text = "See more";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(3, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 26);
+            this.label3.TabIndex = 127;
+            this.label3.Tag = "blocks";
+            this.label3.Text = "Top picks";
+            // 
+            // flowLayoutPanelToppicks
+            // 
+            this.flowLayoutPanelToppicks.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelToppicks.Location = new System.Drawing.Point(8, 77);
+            this.flowLayoutPanelToppicks.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelToppicks.Name = "flowLayoutPanelToppicks";
+            this.flowLayoutPanelToppicks.Size = new System.Drawing.Size(695, 154);
+            this.flowLayoutPanelToppicks.TabIndex = 126;
             // 
             // label4
             // 
@@ -275,27 +310,20 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(20, 286);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(12, 244);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 32);
-            this.label4.TabIndex = 20;
+            this.label4.Size = new System.Drawing.Size(123, 26);
+            this.label4.TabIndex = 130;
             this.label4.Tag = "blocks";
             this.label4.Text = "Top artists";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label32
+            // flowLayoutPanel2
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label32.Location = new System.Drawing.Point(20, 469);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(232, 32);
-            this.label32.TabIndex = 96;
-            this.label32.Tag = "blocks";
-            this.label32.Text = "Recently played";
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 272);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(704, 110);
+            this.flowLayoutPanel2.TabIndex = 129;
             // 
             // linkLabel1
             // 
@@ -303,27 +331,33 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(848, 480);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(607, 409);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(89, 20);
-            this.linkLabel1.TabIndex = 97;
+            this.linkLabel1.Size = new System.Drawing.Size(74, 16);
+            this.linkLabel1.TabIndex = 133;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Tag = "blocks";
             this.linkLabel1.Text = "See more";
             // 
-            // label42
+            // label32
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label42.Location = new System.Drawing.Point(25, 730);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(191, 31);
-            this.label42.TabIndex = 113;
-            this.label42.Tag = "blocks";
-            this.label42.Text = "New releases";
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label32.Location = new System.Drawing.Point(3, 401);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(182, 26);
+            this.label32.TabIndex = 132;
+            this.label32.Tag = "blocks";
+            this.label32.Text = "Recently played";
+            // 
+            // flowLayoutRecently
+            // 
+            this.flowLayoutRecently.Location = new System.Drawing.Point(8, 430);
+            this.flowLayoutRecently.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutRecently.Name = "flowLayoutRecently";
+            this.flowLayoutRecently.Size = new System.Drawing.Size(693, 156);
+            this.flowLayoutRecently.TabIndex = 131;
             // 
             // linkLabel2
             // 
@@ -331,94 +365,57 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(848, 740);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel2.Location = new System.Drawing.Point(609, 620);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(89, 20);
-            this.linkLabel2.TabIndex = 114;
+            this.linkLabel2.Size = new System.Drawing.Size(74, 16);
+            this.linkLabel2.TabIndex = 136;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Tag = "blocks";
             this.linkLabel2.Text = "See more";
             // 
-            // panel2
+            // label5
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.panel2.Controls.Add(this.linkLabel2);
-            this.panel2.Controls.Add(this.label42);
-            this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.label32);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.see_more);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.flowLayoutPanelToppicks);
-            this.panel2.Controls.Add(this.flowLayoutPanel2);
-            this.panel2.Controls.Add(this.flowLayoutRecently);
-            this.panel2.Controls.Add(this.flowLayoutReleases);
-            this.panel2.Location = new System.Drawing.Point(210, 79);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(966, 548);
-            this.panel2.TabIndex = 138;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(8, 613);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 25);
+            this.label5.TabIndex = 135;
+            this.label5.Tag = "blocks";
+            this.label5.Text = "New releases";
             // 
-            // flowLayoutPanelToppicks
+            // flowLayoutPanel1
             // 
-            this.flowLayoutPanelToppicks.Location = new System.Drawing.Point(26, 68);
-            this.flowLayoutPanelToppicks.Name = "flowLayoutPanelToppicks";
-            this.flowLayoutPanelToppicks.Size = new System.Drawing.Size(927, 189);
-            this.flowLayoutPanelToppicks.TabIndex = 7;
+            this.flowLayoutPanel1.Controls.Add(this.flowReleases);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 640);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(685, 179);
+            this.flowLayoutPanel1.TabIndex = 134;
             // 
-            // flowLayoutPanel2
+            // flowReleases
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 320);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(938, 136);
-            this.flowLayoutPanel2.TabIndex = 8;
-            // 
-            // flowLayoutRecently
-            // 
-            this.flowLayoutRecently.Location = new System.Drawing.Point(3, 503);
-            this.flowLayoutRecently.Name = "flowLayoutRecently";
-            this.flowLayoutRecently.Size = new System.Drawing.Size(938, 219);
-            this.flowLayoutRecently.TabIndex = 9;
-            // 
-            // flowLayoutReleases
-            // 
-            this.flowLayoutReleases.Location = new System.Drawing.Point(3, 763);
-            this.flowLayoutReleases.Name = "flowLayoutReleases";
-            this.flowLayoutReleases.Size = new System.Drawing.Size(938, 220);
-            this.flowLayoutReleases.TabIndex = 10;
-            // 
-            // disable_bar
-            // 
-            this.disable_bar.Image = ((System.Drawing.Image)(resources.GetObject("disable_bar.Image")));
-            this.disable_bar.Location = new System.Drawing.Point(-2, 560);
-            this.disable_bar.Margin = new System.Windows.Forms.Padding(4);
-            this.disable_bar.Name = "disable_bar";
-            this.disable_bar.Size = new System.Drawing.Size(1171, 67);
-            this.disable_bar.TabIndex = 141;
-            this.disable_bar.TabStop = false;
-            // 
-            // nowplayingControl1
-            // 
-            this.nowplayingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.nowplayingControl1.Location = new System.Drawing.Point(0, 627);
-            this.nowplayingControl1.Name = "nowplayingControl1";
-            this.nowplayingControl1.Size = new System.Drawing.Size(1165, 75);
-            this.nowplayingControl1.TabIndex = 142;
-            this.nowplayingControl1.Load += new System.EventHandler(this.nowplayingControl1_Load_1);
+            this.flowReleases.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowReleases.Location = new System.Drawing.Point(2, 2);
+            this.flowReleases.Margin = new System.Windows.Forms.Padding(2);
+            this.flowReleases.Name = "flowReleases";
+            this.flowReleases.Size = new System.Drawing.Size(685, 165);
+            this.flowReleases.TabIndex = 124;
             // 
             // Homepage_Fan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 714);
+            this.ClientSize = new System.Drawing.Size(874, 580);
             this.Controls.Add(this.nowplayingControl1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.disable_bar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Homepage_Fan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage_Fan";
@@ -434,9 +431,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -457,18 +455,19 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox disable_bar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel see_more;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutRecently;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutReleases;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelToppicks;
         private Playmusic.NowplayingControl nowplayingControl1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.LinkLabel see_more;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelToppicks;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowReleases;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutRecently;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
