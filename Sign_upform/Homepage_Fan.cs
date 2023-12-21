@@ -257,5 +257,30 @@ namespace Sign_upform
         {
 
         }
+
+
+        private void PreviousPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void see_more_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MoreMusic moreMusic = new MoreMusic();
+            moreMusic.StartPosition = FormStartPosition.CenterScreen;
+            moreMusic.Location = this.Location;
+            moreMusic.Show();
+            this.Hide();
+        }
+
+        private void flowLayoutPanelToppicks_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

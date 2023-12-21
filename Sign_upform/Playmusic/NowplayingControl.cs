@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Guna.UI2.AnimatorNS;
+using Guna.UI2.WinForms.Suite;
 using NAudio.Wave;
 
 namespace Sign_upform.Playmusic
@@ -192,8 +194,20 @@ namespace Sign_upform.Playmusic
 
         }
 
+        int flags = 1;
         private void play_pause_Click(object sender, EventArgs e)
         {
+            flags *= -1;
+            if (flags == -1)
+            {//liên kết đến kho ảnh trong máy(cần phải tải về trước)
+                Bitmap b = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\angle-left 3.png");
+                play_pause.Image = b; // gọi lại biến để xuất ảnh
+            }
+            else
+            {
+                Bitmap c = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\Pause.png");
+                play_pause.Image = c;
+            }
             PlayPauseMusic();
         }
 

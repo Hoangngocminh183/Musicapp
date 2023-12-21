@@ -44,7 +44,7 @@ namespace Sign_upform
                 sqlConnection.Close();
             }
         }
-        public List<Music> GetMusicList()
+        public List<Music> GetMusicList()     
         {
             List<Music> musicList = new List<Music>();
             string query = "SELECT SongID, Title, Artist, FilePath, ImagePath FROM Songs"; // Thay thế bằng tên bảng thực tế của bạn

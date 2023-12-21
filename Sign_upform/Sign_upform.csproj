@@ -143,6 +143,12 @@
       <DependentUpon>Login_Artists.cs</DependentUpon>
     </Compile>
     <Compile Include="Modify.cs" />
+    <Compile Include="MoreMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreMusic.Designer.cs">
+      <DependentUpon>MoreMusic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notification_Artist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     </Compile>
     <Compile Include="Playlist\ControlMussic.Designer.cs">
       <DependentUpon>ControlMussic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Playlist\MusicList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Playlist\MusicList.Designer.cs">
+      <DependentUpon>MusicList.cs</DependentUpon>
     </Compile>
     <Compile Include="Playmusic\NowplayingControl.cs">
       <SubType>UserControl</SubType>
@@ -236,6 +248,9 @@
     <EmbeddedResource Include="Login_Artists.resx">
       <DependentUpon>Login_Artists.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoreMusic.resx">
+      <DependentUpon>MoreMusic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notifications.aa.resx">
       <DependentUpon>Notifications.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Playlist\ControlMussic.resx">
       <DependentUpon>ControlMussic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Playlist\MusicList.resx">
+      <DependentUpon>MusicList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Playmusic\NowplayingControl.resx">
       <DependentUpon>NowplayingControl.cs</DependentUpon>
@@ -311,6 +329,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pictureBox4.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\angle-left 3.png" />
+    <Content Include="Resources\Pause.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
