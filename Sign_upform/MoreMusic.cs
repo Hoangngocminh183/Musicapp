@@ -68,8 +68,7 @@ namespace Sign_upform
 
         private void PreviousPage_Click(object sender, EventArgs e)
         {
-            Homepage_Fan homepage_Fan = new Homepage_Fan();
-            homepage_Fan.Show();
+           
             this.Hide();
         }
 
@@ -86,6 +85,16 @@ namespace Sign_upform
         private void flowLayoutMoreMusic_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void InspiroMix_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

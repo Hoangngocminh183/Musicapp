@@ -263,15 +263,6 @@
         /BlLWAEdnU/yb+O/ZHf9hvqYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAL5JREFUOE9j0FDW/U8uZkAXIAXDNcdGJf7fs3vv/08fP4HxujUb/gf4hPxfMG8x
-        ipiznTuq5orS6v+fPn36P2XitP+mhlb/ne3d/69bu+E/CCyctxgsBsKVZTX/nzx5ClYP1wxSWFFag+Es
-        EEAXA6kDqR/VTA3NoLgFYWTNID4oHWDVnJ2R9//J4yfghHD92g1wXIL4IACiQWJgcagakHq4ZhAGJQwQ
-        hvFBCQJkQ1xUElwMJA9KLDA+ddI2ORgASK++3wP8wgYAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="InspiroMix.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFQAAAAUCAYAAAATMxqtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -370,4 +361,7 @@
         AAAAFfs/DhmJeLsT0nQAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 17</value>
+  </metadata>
 </root>

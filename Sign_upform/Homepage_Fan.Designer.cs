@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage_Fan));
             this.SearchSong = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
@@ -40,15 +39,16 @@
             this.Home = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.InspiroMix = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.SearchPanel = new System.Windows.Forms.Panel();
+            this.flowLayoutSearch = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelerror = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowReleases = new System.Windows.Forms.FlowLayoutPanel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label32 = new System.Windows.Forms.Label();
             this.flowLayoutRecently = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanelToppicks = new System.Windows.Forms.FlowLayoutPanel();
             this.disable_bar = new System.Windows.Forms.PictureBox();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.nowplayingControl1 = new Sign_upform.Playmusic.NowplayingControl();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
@@ -66,9 +68,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).BeginInit();
             this.panel2.SuspendLayout();
+            this.SearchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).BeginInit();
             this.SuspendLayout();
@@ -85,21 +88,8 @@
             this.SearchSong.Name = "SearchSong";
             this.SearchSong.Size = new System.Drawing.Size(451, 19);
             this.SearchSong.TabIndex = 1;
-            this.SearchSong.Text = "Let\'s search your tune...";
             this.SearchSong.TextChanged += new System.EventHandler(this.SearchSong_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(47, 144);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "My Library";
+            this.SearchSong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchSong_KeyDown);
             // 
             // panel3
             // 
@@ -199,10 +189,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(19)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Home);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.InspiroMix);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -215,25 +203,12 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(24, 101);
+            this.pictureBox3.Location = new System.Drawing.Point(24, 102);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 25);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(24, 143);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // InspiroMix
             // 
@@ -250,10 +225,9 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.panel2.Controls.Add(this.linkLabel2);
+            this.panel2.Controls.Add(this.SearchPanel);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label32);
             this.panel2.Controls.Add(this.flowLayoutRecently);
             this.panel2.Controls.Add(this.label4);
@@ -268,20 +242,51 @@
             this.panel2.TabIndex = 138;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // linkLabel2
+            // SearchPanel
             // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.White;
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(812, 763);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(89, 20);
-            this.linkLabel2.TabIndex = 136;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Tag = "blocks";
-            this.linkLabel2.Text = "See more";
+            this.SearchPanel.AutoScroll = true;
+            this.SearchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.SearchPanel.Controls.Add(this.labelTitle);
+            this.SearchPanel.Controls.Add(this.flowLayoutSearch);
+            this.SearchPanel.Controls.Add(this.labelerror);
+            this.SearchPanel.Controls.Add(this.pictureBox1);
+            this.SearchPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchPanel.Location = new System.Drawing.Point(10, 15);
+            this.SearchPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchPanel.Name = "SearchPanel";
+            this.SearchPanel.Size = new System.Drawing.Size(912, 989);
+            this.SearchPanel.TabIndex = 139;
+            this.SearchPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SearchPanel_Paint);
+            // 
+            // flowLayoutSearch
+            // 
+            this.flowLayoutSearch.Location = new System.Drawing.Point(13, 80);
+            this.flowLayoutSearch.Name = "flowLayoutSearch";
+            this.flowLayoutSearch.Size = new System.Drawing.Size(932, 415);
+            this.flowLayoutSearch.TabIndex = 156;
+            this.flowLayoutSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutSearch_Paint);
+            // 
+            // labelerror
+            // 
+            this.labelerror.AutoSize = true;
+            this.labelerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelerror.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelerror.Location = new System.Drawing.Point(7, 21);
+            this.labelerror.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelerror.Name = "labelerror";
+            this.labelerror.Size = new System.Drawing.Size(261, 32);
+            this.labelerror.TabIndex = 155;
+            this.labelerror.Tag = "blocks";
+            this.labelerror.Text = "Search results for ";
+            this.labelerror.Click += new System.EventHandler(this.labelError);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(899, 62);
+            this.pictureBox1.TabIndex = 157;
+            this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
@@ -314,21 +319,6 @@
             this.flowReleases.Name = "flowReleases";
             this.flowReleases.Size = new System.Drawing.Size(913, 203);
             this.flowReleases.TabIndex = 124;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(809, 503);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(89, 20);
-            this.linkLabel1.TabIndex = 133;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Tag = "blocks";
-            this.linkLabel1.Text = "See more";
             // 
             // label32
             // 
@@ -422,6 +412,22 @@
             this.disable_bar.TabIndex = 141;
             this.disable_bar.TabStop = false;
             // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.labelTitle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTitle.Location = new System.Drawing.Point(304, 21);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(74, 32);
+            this.labelTitle.TabIndex = 158;
+            this.labelTitle.Tag = "blocks";
+            this.labelTitle.Text = "Title";
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
+            // 
             // nowplayingControl1
             // 
             this.nowplayingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
@@ -457,10 +463,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.SearchPanel.ResumeLayout(false);
+            this.SearchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.disable_bar)).EndInit();
             this.ResumeLayout(false);
@@ -473,14 +481,12 @@
         private System.Windows.Forms.TextBox SearchSong;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox29;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox PreviousPage;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label Home;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox disable_bar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Playmusic.NowplayingControl nowplayingControl1;
@@ -488,14 +494,18 @@
         private System.Windows.Forms.LinkLabel see_more;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelToppicks;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowReleases;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutRecently;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel SearchPanel;
+        private System.Windows.Forms.Label labelerror;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelTitle;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

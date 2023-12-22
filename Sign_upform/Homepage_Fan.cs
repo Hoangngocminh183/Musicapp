@@ -1,4 +1,5 @@
-﻿using Sign_upform.Playlist;
+﻿using Microsoft.Win32;
+using Sign_upform.Playlist;
 using Sign_upform.Playmusic;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Sign_upform
             InitializeComponent();
             LoadMusicIntoUserControl();
             LoadNewReleasesIntoUserControl();
+            SearchPanel.Visible = false;
         }
       
         private void LoadMusicIntoUserControl()
@@ -261,7 +263,7 @@ namespace Sign_upform
 
         private void PreviousPage_Click(object sender, EventArgs e)
         {
-
+            SearchPanel.Visible=false;
         }
 
         private void NextPage1_Click(object sender, EventArgs e)
@@ -275,10 +277,66 @@ namespace Sign_upform
             moreMusic.StartPosition = FormStartPosition.CenterScreen;
             moreMusic.Location = this.Location;
             moreMusic.Show();
-            this.Hide();
         }
 
         private void flowLayoutPanelToppicks_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutSearch_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void UpdateLablelTitle(string title)
+        {
+            labelTitle.Text = $"\"{title}\"";
+        }
+        private void PerformSearch(string searchText)
+        {
+            List<Music> searchResults = modify.SearchMusic(searchText);
+
+            SearchPanel.Visible = true;
+            flowLayoutSearch.Controls.Clear();
+
+            if (searchResults.Count > 0)
+            {
+                foreach (Music music in searchResults)
+                {
+                    ControlMussic musicControl = new ControlMussic();
+                    musicControl.SetData(music);
+                    flowLayoutSearch.Controls.Add(musicControl);
+
+                    musicControl.MusicClicked += MusicControl_MusicClicked;
+                }
+            }
+            else
+            {
+                labelerror.Text = "No results found for";
+            }
+            
+        }
+        private void SearchSong_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string searchText = SearchSong.Text.Trim();
+                UpdateLablelTitle(searchText);
+                PerformSearch(searchText);
+            }
+        }
+
+        private void labelError(object sender, EventArgs e)
         {
 
         }
