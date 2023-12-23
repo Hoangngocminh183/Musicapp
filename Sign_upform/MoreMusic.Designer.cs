@@ -92,10 +92,10 @@
             this.panel1.Controls.Add(this.Home);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.InspiroMix);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 631);
+            this.panel1.Size = new System.Drawing.Size(213, 636);
             this.panel1.TabIndex = 144;
             // 
             // pictureBox3
@@ -130,10 +130,11 @@
             this.label3.Location = new System.Drawing.Point(17, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 32);
+            this.label3.Size = new System.Drawing.Size(142, 32);
             this.label3.TabIndex = 127;
             this.label3.Tag = "blocks";
-            this.label3.Text = "Top picks";
+            this.label3.Text = "Song List";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -144,10 +145,10 @@
             this.panel3.Controls.Add(this.PreviousPage);
             this.panel3.Controls.Add(this.SearchSong);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(211, 1);
+            this.panel3.Location = new System.Drawing.Point(211, -4);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(955, 87);
+            this.panel3.Size = new System.Drawing.Size(955, 92);
             this.panel3.TabIndex = 145;
             // 
             // pictureBox30
@@ -236,7 +237,7 @@
             this.flowLayoutMoreMusic.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutMoreMusic.Location = new System.Drawing.Point(23, 85);
             this.flowLayoutMoreMusic.Name = "flowLayoutMoreMusic";
-            this.flowLayoutMoreMusic.Size = new System.Drawing.Size(919, 447);
+            this.flowLayoutMoreMusic.Size = new System.Drawing.Size(904, 1868);
             this.flowLayoutMoreMusic.TabIndex = 137;
             this.flowLayoutMoreMusic.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMoreMusic_Paint);
             // 
@@ -253,10 +254,10 @@
             // nowplayingControl1
             // 
             this.nowplayingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.nowplayingControl1.Location = new System.Drawing.Point(0, 632);
+            this.nowplayingControl1.Location = new System.Drawing.Point(0, 629);
             this.nowplayingControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nowplayingControl1.Name = "nowplayingControl1";
-            this.nowplayingControl1.Size = new System.Drawing.Size(1171, 87);
+            this.nowplayingControl1.Size = new System.Drawing.Size(1171, 90);
             this.nowplayingControl1.TabIndex = 147;
             this.nowplayingControl1.Load += new System.EventHandler(this.nowplayingControl1_Load);
             // 

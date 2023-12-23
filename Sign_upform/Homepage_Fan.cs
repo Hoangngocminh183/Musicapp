@@ -82,7 +82,7 @@ namespace Sign_upform
 
         private void UpdateRecentlyPlayedControls()
         {
-            flowLayoutRecently.Controls.Clear();
+           // flowLayoutRecently.Controls.Clear();
 
             foreach (ControlMussic musicControl in recentlyPlayedControls)
             {
@@ -304,28 +304,60 @@ namespace Sign_upform
         }
         private void PerformSearch(string searchText)
         {
-            List<Music> searchResults = modify.SearchMusic(searchText);
-
+            List<Music> searchResultsByTitle = modify.SearchMusic(searchText);
+            List<Music> searchResultsByArtist = modify.SearchMusicByArtist(searchText);
             SearchPanel.Visible = true;
             flowLayoutSearch.Controls.Clear();
 
-            if (searchResults.Count > 0)
+            HashSet<string> addedArtists = new HashSet<string>(); // Sử dụng HashSet để đảm bảo chỉ có một nghệ sĩ duy nhất được thêm vào
+
+            bool hasResults = false; // Dùng để kiểm tra xem có kết quả nào không
+
+            if (searchResultsByTitle.Count > 0)
             {
-                foreach (Music music in searchResults)
+                foreach (Music music in searchResultsByTitle)
                 {
                     ControlMussic musicControl = new ControlMussic();
                     musicControl.SetData(music);
                     flowLayoutSearch.Controls.Add(musicControl);
-
                     musicControl.MusicClicked += MusicControl_MusicClicked;
                 }
+
+                hasResults = true;
             }
-            else
+
+            if (searchResultsByArtist.Count > 0)
+            {
+                foreach (Music music in searchResultsByArtist)
+                {
+                    string artistName = music.Artist;
+
+                    // Kiểm tra xem nghệ sĩ đã được thêm vào hay chưa
+                    if (!addedArtists.Contains(artistName))
+                    {
+                        SearchArtist searchArtist = new SearchArtist();
+                        searchArtist.SetData(music);
+                        flowLayoutSearch.Controls.Add(searchArtist);
+
+                        // Thêm nghệ sĩ vào danh sách đã thêm
+                        addedArtists.Add(artistName);
+                    }
+                }
+
+                hasResults = true;
+            }
+
+            if (!hasResults)
             {
                 labelerror.Text = "No results found for";
             }
-            
+            else
+            {
+                // Có kết quả
+            }
         }
+
+
         private void SearchSong_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
@@ -337,6 +369,11 @@ namespace Sign_upform
         }
 
         private void labelError(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

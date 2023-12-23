@@ -137,6 +137,37 @@ namespace Sign_upform
 
             return searchResults;
         }
+        public List<Music> SearchMusicByArtist(string searchText)
+        {
+            List<Music> searchResults = new List<Music>();
+            string query = "SELECT SongID, Title, Artist, FilePath, ImagePath FROM Songs WHERE UPPER(Artist) LIKE UPPER(@searchText)";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                dataReader = sqlCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    Music music = new Music
+                    {
+                        SongID = dataReader.GetInt32(0),
+                        Title = dataReader.GetString(1),
+                        Artist = dataReader.GetString(2),
+                        FilePath = dataReader.GetString(3),
+                        ImagePath = dataReader.GetString(4),
+                    };
+
+                    searchResults.Add(music);
+                }
+
+                sqlConnection.Close();
+            }
+
+            return searchResults;
+        }
 
     }
 }

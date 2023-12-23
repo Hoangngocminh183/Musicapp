@@ -199,7 +199,7 @@
             this.Controls.Add(this.pictureBox6);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
             this.Name = "MusicList";
-            this.Size = new System.Drawing.Size(464, 198);
+            this.Size = new System.Drawing.Size(727, 198);
             this.Load += new System.EventHandler(this.MusicList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMusic)).EndInit();
