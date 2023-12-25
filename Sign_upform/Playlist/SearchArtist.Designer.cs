@@ -53,7 +53,7 @@
             this.follow.Margin = new System.Windows.Forms.Padding(4);
             this.follow.Name = "follow";
             this.follow.ShadowDecoration.Parent = this.follow;
-            this.follow.Size = new System.Drawing.Size(87, 25);
+            this.follow.Size = new System.Drawing.Size(91, 31);
             this.follow.TabIndex = 169;
             this.follow.Text = "Follow";
             this.follow.Click += new System.EventHandler(this.follow_Click);
@@ -62,7 +62,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label5.Location = new System.Drawing.Point(137, 52);
@@ -97,7 +97,7 @@
             this.Artistname.Location = new System.Drawing.Point(134, 4);
             this.Artistname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Artistname.Name = "Artistname";
-            this.Artistname.Size = new System.Drawing.Size(100, 39);
+            this.Artistname.Size = new System.Drawing.Size(98, 38);
             this.Artistname.TabIndex = 170;
             this.Artistname.Tag = "blocks";
             this.Artistname.Text = "Artist";

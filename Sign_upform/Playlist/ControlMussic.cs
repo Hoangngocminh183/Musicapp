@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +16,18 @@ namespace Sign_upform.Playlist
 {
     public partial class ControlMussic : UserControl
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+               int nLeftRect,
+               int nTopRect,
+               int nRightRect,
+               int nBottomRect,
+               int nWidthEllipse,
+               int nHeightEllipse
+            );
         public event EventHandler MusicClicked;
+        public event EventHandler<string> ArtistClicked;
         private string filePath;
         private Music musicData;
         public ControlMussic()
@@ -47,12 +60,13 @@ namespace Sign_upform.Playlist
 
         private void Artist_Click(object sender, EventArgs e)
         {
-
+            ArtistClicked?.Invoke(this, musicData.Artist);
         }
 
         private void ControlMussic_Load(object sender, EventArgs e)
         {
-
+            pictureMusic.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureMusic.Width,
+    pictureMusic.Height, 12, 12));
         }
         private string TruncateStringWithEllipsis(string input, int maxLength)
         {

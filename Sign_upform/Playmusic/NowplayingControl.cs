@@ -399,6 +399,9 @@ namespace Sign_upform.Playmusic
             }
         }
 
-        
+        private void RandomMusic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

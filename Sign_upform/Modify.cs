@@ -140,7 +140,11 @@ namespace Sign_upform
         public List<Music> SearchMusicByArtist(string searchText)
         {
             List<Music> searchResults = new List<Music>();
-            string query = "SELECT SongID, Title, Artist, FilePath, ImagePath FROM Songs WHERE UPPER(Artist) LIKE UPPER(@searchText)";
+             string query = "SELECT Artist, ImageArtits FROM Followers WHERE UPPER(Artist) LIKE UPPER(@searchText)";
+           /* string query = "SELECT F.SongID, S.Title, F.Artist, S.FilePath, S.ImagePath, F.ImageArtits " +
+               "FROM Followers F " +
+               "JOIN Songs S ON F.SongID = S.SongID " +
+               "WHERE UPPER(F.Artist) LIKE UPPER(@searchText)";*/
 
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
@@ -153,11 +157,8 @@ namespace Sign_upform
                 {
                     Music music = new Music
                     {
-                        SongID = dataReader.GetInt32(0),
-                        Title = dataReader.GetString(1),
-                        Artist = dataReader.GetString(2),
-                        FilePath = dataReader.GetString(3),
-                        ImagePath = dataReader.GetString(4),
+                        Artist = dataReader.GetString(0),
+                        ImageArtits = dataReader.GetString(1),
                     };
 
                     searchResults.Add(music);
@@ -168,6 +169,37 @@ namespace Sign_upform
 
             return searchResults;
         }
+        public List<Music> GetControlsByArtist(string artistName)
+    {
+        List<Music> artistControls = new List<Music>();
+        string query = "SELECT SongID, Title, Artist, FilePath, ImagePath FROM Songs WHERE UPPER(Artist) LIKE UPPER(@artistName)";
+
+        using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+        {
+            sqlConnection.Open();
+            sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@artistName", "%" + artistName + "%");
+            dataReader = sqlCommand.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                Music music = new Music
+                {
+                    SongID = dataReader.GetInt32(0),
+                    Title = dataReader.GetString(1),
+                    Artist = dataReader.GetString(2),
+                    FilePath = dataReader.GetString(3),
+                    ImagePath = dataReader.GetString(4),
+                };
+
+                artistControls.Add(music);
+            }
+
+            sqlConnection.Close();
+        }
+
+        return artistControls;
+    }
 
     }
 }

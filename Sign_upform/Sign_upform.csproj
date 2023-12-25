@@ -87,6 +87,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrtistPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrtistPage.Designer.cs">
+      <DependentUpon>ArrtistPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="changed_your_password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </Compile>
     <Compile Include="Music.cs" />
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="ArrtistPage.resx">
+      <DependentUpon>ArrtistPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="changed_your_password.resx">
       <DependentUpon>changed_your_password.cs</DependentUpon>
     </EmbeddedResource>

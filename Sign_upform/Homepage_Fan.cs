@@ -36,6 +36,8 @@ namespace Sign_upform
                 // Nạp dữ liệu từ đối tượng Music vào User Control
                 musicControl.SetData(music);
 
+                // Đăng ký sự kiện ArtistClicked
+                musicControl.ArtistClicked += MusicControl_ArtistClicked;
                 // Thêm User Control vào FlowLayoutPanelToppicks
                 flowLayoutPanelToppicks.Controls.Add(musicControl);
 
@@ -78,6 +80,29 @@ namespace Sign_upform
                 }
             }
         }
+        private void MusicControl_ArtistClicked(object sender, string artistName)
+        {
+            // Mở ArtistPage và chuyển artistName
+            ArrtistPage artistPage = new ArrtistPage();
+            artistPage.StartPosition = FormStartPosition.CenterScreen;
+            // Load thông tin từ bảng Followers
+            artistPage.LoadArtistControls(artistName);
+            // Tải kết quả tìm kiếm từ Followers vào flowLayoutSearch
+            LoadSearchResultsFromFollowers(artistName, artistPage);
+            artistPage.Show();
+        }
+        private void LoadSearchResultsFromFollowers(string artistName, ArrtistPage artistPage)
+        {
+            // Gọi phương thức trên ArtistPage để tải kết quả tìm kiếm từ Followers
+            List<Music> searchResults = modify.SearchMusicByArtist(artistName);
+
+            foreach (Music music in searchResults)
+            {
+                SearchArtist searchArtist = new SearchArtist();
+                searchArtist.SetData(music);
+                artistPage.AddSearchResult(searchArtist); // AddSearchResult là một phương thức bạn cần triển khai trong ArtistPage
+            }
+        }
         private List<ControlMussic> recentlyPlayedControls = new List<ControlMussic>();
 
         private void UpdateRecentlyPlayedControls()
@@ -88,6 +113,8 @@ namespace Sign_upform
             {
                 flowLayoutRecently.Controls.Add(musicControl);
 
+                // Đăng ký sự kiện ArtistClicked
+                musicControl.ArtistClicked += MusicControl_ArtistClicked;
                 // Đăng ký sự kiện cho việc nhấn vào musicControl trong FlowLayoutRecently
                 musicControl.MusicClicked += RecentlyPlayedMusicControl_Clicked;
             }
@@ -110,6 +137,8 @@ namespace Sign_upform
                 ControlMussic musicControl = new ControlMussic();
                 musicControl.SetData(music);
                 flowReleases.Controls.Add(musicControl); // Thêm vào cuối danh sách
+                                                         // Đăng ký sự kiện ArtistClicked
+                musicControl.ArtistClicked += MusicControl_ArtistClicked;
                 musicControl.MusicClicked += MusicControl_MusicClicked; // Đăng ký sự kiện
             }
         }
@@ -275,7 +304,6 @@ namespace Sign_upform
         {
             MoreMusic moreMusic = new MoreMusic();
             moreMusic.StartPosition = FormStartPosition.CenterScreen;
-            moreMusic.Location = this.Location;
             moreMusic.Show();
         }
 

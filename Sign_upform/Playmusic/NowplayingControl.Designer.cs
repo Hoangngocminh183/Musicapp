@@ -43,7 +43,7 @@
             this.MusicLoop = new System.Windows.Forms.PictureBox();
             this.Next = new System.Windows.Forms.PictureBox();
             this.previous = new System.Windows.Forms.PictureBox();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.RandomMusic = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -55,7 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MusicLoop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RandomMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             this.SuspendLayout();
@@ -96,7 +96,7 @@
             this.Volume.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.Volume.HoverState.Parent = this.Volume;
             this.Volume.Location = new System.Drawing.Point(1060, 31);
-            this.Volume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Volume.Margin = new System.Windows.Forms.Padding(4);
             this.Volume.Name = "Volume";
             this.Volume.Size = new System.Drawing.Size(87, 12);
             this.Volume.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
@@ -109,7 +109,7 @@
             this.guna2ProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.guna2ProgressBar1.Location = new System.Drawing.Point(661, 36);
-            this.guna2ProgressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ProgressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
             this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.White;
             this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.White;
@@ -153,7 +153,7 @@
             // 
             this.heart_active.Image = ((System.Drawing.Image)(resources.GetObject("heart_active.Image")));
             this.heart_active.Location = new System.Drawing.Point(205, 31);
-            this.heart_active.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.heart_active.Margin = new System.Windows.Forms.Padding(4);
             this.heart_active.Name = "heart_active";
             this.heart_active.Size = new System.Drawing.Size(15, 15);
             this.heart_active.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -164,7 +164,7 @@
             // 
             this.transfer_images.BackColor = System.Drawing.Color.Transparent;
             this.transfer_images.Location = new System.Drawing.Point(11, 2);
-            this.transfer_images.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.transfer_images.Margin = new System.Windows.Forms.Padding(4);
             this.transfer_images.Name = "transfer_images";
             this.transfer_images.Size = new System.Drawing.Size(84, 78);
             this.transfer_images.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +176,7 @@
             // 
             this.pictureBox40.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox40.Image")));
             this.pictureBox40.Location = new System.Drawing.Point(1037, 32);
-            this.pictureBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox40.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(14, 11);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -187,7 +187,7 @@
             // 
             this.play_pause.Image = ((System.Drawing.Image)(resources.GetObject("play_pause.Image")));
             this.play_pause.Location = new System.Drawing.Point(447, 23);
-            this.play_pause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.play_pause.Margin = new System.Windows.Forms.Padding(4);
             this.play_pause.Name = "play_pause";
             this.play_pause.Size = new System.Drawing.Size(31, 30);
             this.play_pause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +199,7 @@
             // 
             this.MusicLoop.Image = ((System.Drawing.Image)(resources.GetObject("MusicLoop.Image")));
             this.MusicLoop.Location = new System.Drawing.Point(544, 32);
-            this.MusicLoop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MusicLoop.Margin = new System.Windows.Forms.Padding(4);
             this.MusicLoop.Name = "MusicLoop";
             this.MusicLoop.Size = new System.Drawing.Size(16, 15);
             this.MusicLoop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -211,7 +211,7 @@
             // 
             this.Next.Image = ((System.Drawing.Image)(resources.GetObject("Next.Image")));
             this.Next.Location = new System.Drawing.Point(504, 32);
-            this.Next.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(15, 15);
             this.Next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,7 +223,7 @@
             // 
             this.previous.Image = ((System.Drawing.Image)(resources.GetObject("previous.Image")));
             this.previous.Location = new System.Drawing.Point(407, 32);
-            this.previous.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previous.Margin = new System.Windows.Forms.Padding(4);
             this.previous.Name = "previous";
             this.previous.Size = new System.Drawing.Size(15, 15);
             this.previous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -231,22 +231,23 @@
             this.previous.TabStop = false;
             this.previous.Click += new System.EventHandler(this.previous_Click);
             // 
-            // pictureBox35
+            // RandomMusic
             // 
-            this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(368, 32);
-            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox35.TabIndex = 148;
-            this.pictureBox35.TabStop = false;
+            this.RandomMusic.Image = ((System.Drawing.Image)(resources.GetObject("RandomMusic.Image")));
+            this.RandomMusic.Location = new System.Drawing.Point(368, 32);
+            this.RandomMusic.Margin = new System.Windows.Forms.Padding(4);
+            this.RandomMusic.Name = "RandomMusic";
+            this.RandomMusic.Size = new System.Drawing.Size(15, 15);
+            this.RandomMusic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.RandomMusic.TabIndex = 148;
+            this.RandomMusic.TabStop = false;
+            this.RandomMusic.Click += new System.EventHandler(this.RandomMusic_Click);
             // 
             // pictureBox34
             // 
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
             this.pictureBox34.Location = new System.Drawing.Point(251, 31);
-            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(15, 15);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -257,7 +258,7 @@
             // 
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
             this.pictureBox33.Location = new System.Drawing.Point(228, 31);
-            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(15, 15);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -291,7 +292,7 @@
             this.Controls.Add(this.MusicLoop);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.previous);
-            this.Controls.Add(this.pictureBox35);
+            this.Controls.Add(this.RandomMusic);
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.pictureBox33);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -305,7 +306,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MusicLoop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RandomMusic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             this.ResumeLayout(false);
@@ -328,7 +329,7 @@
         private System.Windows.Forms.PictureBox MusicLoop;
         private System.Windows.Forms.PictureBox Next;
         private System.Windows.Forms.PictureBox previous;
-        private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.PictureBox RandomMusic;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.Timer timer1;

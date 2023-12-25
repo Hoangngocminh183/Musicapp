@@ -21,8 +21,7 @@ namespace Sign_upform.Playlist
         public void SetData(Music music)
         {
             Artistname.Text = music.Artist;
-          
-            
+            pictureArtist.ImageLocation = Path.GetFullPath(music.ImageArtits);
         }
         private void labelArtist_Click(object sender, EventArgs e)
         {
