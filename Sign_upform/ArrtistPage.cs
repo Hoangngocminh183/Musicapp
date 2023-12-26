@@ -67,9 +67,7 @@ namespace Sign_upform
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            Homepage_Fan homepage_Fan = new Homepage_Fan();
-            homepage_Fan.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

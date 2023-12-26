@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms.Suite;
+﻿using Guna.UI2.AnimatorNS;
+using Guna.UI2.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +72,21 @@ namespace Sign_upform.Playlist
         {
             pictureMusic.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureMusic.Width,
      pictureMusic.Height, 12, 12));
+        }
+       int flag = -1;
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            flag *= -1;
+            if (flag == -1)
+            {//liên kết đến kho ảnh trong máy(cần phải tải về trước)
+                Bitmap b = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\heart.png");
+                pictureBox6.Image = b; // gọi lại biến để xuất ảnh
+            }
+            else
+            {
+                Bitmap c = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\Frame 517.png");
+                pictureBox6.Image = c; // gọi lại biến để xuất ảnh
+            }
         }
     }
 }

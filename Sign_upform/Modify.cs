@@ -236,5 +236,33 @@ namespace Sign_upform
 
             return followerCount;
         }
+        public List<Music> GetTopArtists()
+        {
+            List<Music> topArtists = new List<Music>();
+            string query = "SELECT Artist, ImageArtits, Follower FROM Followers ORDER BY Follower DESC";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    Music artist = new Music
+                    {
+                        Artist = dataReader.GetString(0),
+                        ImageArtits = dataReader.GetString(1),
+                        Follower = dataReader.GetInt32(2).ToString()
+                    };
+
+                    topArtists.Add(artist);
+                }
+
+                sqlConnection.Close();
+            }
+
+            return topArtists;
+        }
     }
 }

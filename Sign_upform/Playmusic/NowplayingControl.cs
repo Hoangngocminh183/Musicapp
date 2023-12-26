@@ -415,5 +415,21 @@ namespace Sign_upform.Playmusic
         {
 
         }
+        int flag = -1;
+        private void heart_active_Click(object sender, EventArgs e)
+        {
+            flag *= -1;
+            if (flag == -1)
+            {//liên kết đến kho ảnh trong máy(cần phải tải về trước)
+                Bitmap b = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\heart.png");
+                heart_active.Image = b; // gọi lại biến để xuất ảnh
+            }
+            else
+            {
+                Bitmap c = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\Frame 517.png");
+                heart_active.Image = c; // gọi lại biến để xuất ảnh
+            }
+            
+        }
     }
 }

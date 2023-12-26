@@ -181,6 +181,7 @@
             this.pictureBox6.TabIndex = 172;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "";
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // MusicList
             // 

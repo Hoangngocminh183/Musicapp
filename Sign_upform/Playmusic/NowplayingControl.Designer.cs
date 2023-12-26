@@ -157,6 +157,7 @@
             this.heart_active.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.heart_active.TabIndex = 159;
             this.heart_active.TabStop = false;
+            this.heart_active.Click += new System.EventHandler(this.heart_active_Click);
             // 
             // transfer_images
             // 

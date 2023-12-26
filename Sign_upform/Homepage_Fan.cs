@@ -21,6 +21,7 @@ namespace Sign_upform
             InitializeComponent();
             LoadMusicIntoUserControl();
             LoadNewReleasesIntoUserControl();
+            LoadTopArtistsIntoUserControl();
             SearchPanel.Visible = false;
         }
       
@@ -142,8 +143,28 @@ namespace Sign_upform
                 musicControl.MusicClicked += MusicControl_MusicClicked; // Đăng ký sự kiện
             }
         }
+        private void LoadTopArtistsIntoUserControl()
+        {
+            List<Music> topArtists = modify.GetTopArtists();
 
-
+            foreach (Music artist in topArtists)
+            {
+                Artist artistControl = new Artist();
+                artistControl.SetData(artist);
+                // Subscribe to the ArtistClicked event
+                artistControl.ArtistClicked += TopArtistControl_ArtistClicked;
+                flowTopArtist.Controls.Add(artistControl);
+            }
+        }
+        private void TopArtistControl_ArtistClicked(object sender, string artistName)
+        {
+            // Handle the ArtistClicked event, navigate to ArtistPage
+            ArrtistPage artistPage = new ArrtistPage();
+            artistPage.StartPosition = FormStartPosition.CenterScreen;
+            artistPage.LoadArtistControls(artistName);
+            LoadSearchResultsFromFollowers(artistName, artistPage);
+            artistPage.Show();
+        }
         private void pictureBox34_Click(object sender, EventArgs e)
         {
 
@@ -402,6 +423,11 @@ namespace Sign_upform
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowTopArtist_Paint(object sender, PaintEventArgs e)
         {
 
         }

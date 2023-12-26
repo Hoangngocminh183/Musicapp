@@ -56,7 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.flowReleases = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowTopArtist = new System.Windows.Forms.FlowLayoutPanel();
             this.see_more = new System.Windows.Forms.LinkLabel();
             this.disable_bar = new System.Windows.Forms.PictureBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
@@ -261,7 +261,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.flowReleases);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.flowLayoutPanel2);
+            this.panel2.Controls.Add(this.flowTopArtist);
             this.panel2.Controls.Add(this.see_more);
             this.panel2.Location = new System.Drawing.Point(211, 79);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -279,7 +279,7 @@
             this.SearchPanel.Controls.Add(this.labelerror);
             this.SearchPanel.Controls.Add(this.pictureBox1);
             this.SearchPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchPanel.Location = new System.Drawing.Point(4, 9);
+            this.SearchPanel.Location = new System.Drawing.Point(4, 15);
             this.SearchPanel.Margin = new System.Windows.Forms.Padding(4);
             this.SearchPanel.Name = "SearchPanel";
             this.SearchPanel.Size = new System.Drawing.Size(912, 993);
@@ -413,13 +413,14 @@
             this.label4.Tag = "blocks";
             this.label4.Text = "Top artists";
             // 
-            // flowLayoutPanel2
+            // flowTopArtist
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 294);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(939, 135);
-            this.flowLayoutPanel2.TabIndex = 129;
+            this.flowTopArtist.Location = new System.Drawing.Point(16, 294);
+            this.flowTopArtist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowTopArtist.Name = "flowTopArtist";
+            this.flowTopArtist.Size = new System.Drawing.Size(939, 135);
+            this.flowTopArtist.TabIndex = 129;
+            this.flowTopArtist.Paint += new System.Windows.Forms.PaintEventHandler(this.flowTopArtist_Paint);
             // 
             // see_more
             // 
@@ -516,7 +517,7 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutRecently;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowTopArtist;
         private System.Windows.Forms.Panel SearchPanel;
         private System.Windows.Forms.Label labelerror;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutSearch;

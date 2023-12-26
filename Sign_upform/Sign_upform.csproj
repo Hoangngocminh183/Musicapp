@@ -350,6 +350,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\angle-left 3.png" />
+    <Content Include="Resources\Frame 517.png" />
+    <Content Include="Resources\heart.png" />
     <Content Include="Resources\Pause.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
