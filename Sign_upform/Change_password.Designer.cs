@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.Welcome);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(387, 158);
+            this.panel1.Location = new System.Drawing.Point(453, 193);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(420, 137, 667, 37);
@@ -218,7 +218,7 @@
             // 
             this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
             this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
-            this.invalid_pass.Location = new System.Drawing.Point(387, 106);
+            this.invalid_pass.Location = new System.Drawing.Point(453, 140);
             this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
             this.invalid_pass.Name = "invalid_pass";
             this.invalid_pass.Size = new System.Drawing.Size(316, 48);
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1088, 602);
+            this.ClientSize = new System.Drawing.Size(1155, 591);
             this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.label2_changepass);
             this.Controls.Add(this.panel1);

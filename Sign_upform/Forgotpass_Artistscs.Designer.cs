@@ -73,7 +73,7 @@
             this.panel1.Controls.Add(this.Welcome);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(377, 156);
+            this.panel1.Location = new System.Drawing.Point(437, 173);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(420, 137, 667, 37);
@@ -95,13 +95,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 66);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(27, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 32);
+            this.label1.Size = new System.Drawing.Size(186, 45);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Please enter your email address to reset\r\nyour password.";
+            this.label1.Text = "Please enter your email address \r\nto reset your password.\r\n\r\n";
             // 
             // textBox_Forgot
             // 
@@ -197,7 +197,7 @@
             // 
             this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
             this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
-            this.invalid_pass.Location = new System.Drawing.Point(368, 106);
+            this.invalid_pass.Location = new System.Drawing.Point(428, 123);
             this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
             this.invalid_pass.Name = "invalid_pass";
             this.invalid_pass.Size = new System.Drawing.Size(334, 46);
@@ -211,13 +211,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1155, 591);
             this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2_forgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Forgotpass_Artistscs";
             this.Text = "Forgotpass_Artistscs";
+            this.Load += new System.EventHandler(this.Forgotpass_Artistscs_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

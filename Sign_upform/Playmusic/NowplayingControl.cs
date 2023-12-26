@@ -37,6 +37,7 @@ namespace Sign_upform.Playmusic
         public NowplayingControl()
         {
             InitializeComponent();
+            Share.Visible = false;
             wavePlayer = new WaveOut();
             isPlaying = false;
             pausedPosition = 0;
@@ -395,20 +396,7 @@ namespace Sign_upform.Playmusic
         }
         private void loop_Click(object sender, EventArgs e)
         {
-            // Toggle the looping state
-            isLooping = !isLooping;
-
-            // Update UI to reflect the looping state
-            if (isLooping)
-            {
-                // Set a visual indication that looping is enabled (you can customize this based on your UI)
-                MusicLoop.BackColor = Color.Green; // For example, set the background color to green
-            }
-            else
-            {
-                // Set a visual indication that looping is disabled
-                MusicLoop.BackColor = SystemColors.Control; // Reset the background color to the default
-            }
+            
         }
 
         private void RandomMusic_Click(object sender, EventArgs e)
@@ -430,6 +418,21 @@ namespace Sign_upform.Playmusic
                 heart_active.Image = c; // gọi lại biến để xuất ảnh
             }
             
+        }
+        private bool isShareVisible = false;
+        private void pictureBox33_Click(object sender, EventArgs e)
+        {
+            // Toggle the visibility state
+            isShareVisible = !isShareVisible;
+
+            if (isShareVisible)
+            {
+                Share.Show();
+            }
+            else
+            {
+                Share.Hide();
+            }
         }
     }
 }

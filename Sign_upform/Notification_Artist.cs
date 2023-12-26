@@ -27,10 +27,27 @@ namespace Sign_upform
         {
             InitializeComponent();
         }
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
+            Homepage_Fan homepagefan = new Homepage_Fan();
+            homepagefan.Show();
+            this.Hide();
+            Signup signup = new Signup();
+            signup.Hide();
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Notification_Artist_Load(object sender, EventArgs e)
+        {
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+           panel1.Height, 12, 12)); // bo tròn khung congratulation
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
+          button1.Height, 12, 12));
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,20 @@ namespace Sign_upform
 {
     public partial class Signup_Artists : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+              (
+                 int nLeftRect,
+                 int nTopRect,
+                 int nRightRect,
+                 int nBottomRect,
+                 int nWidthEllipse,
+                 int nHeightEllipse
+              );
         public Signup_Artists()
         {
             InitializeComponent();
+            this.Load += Signup_Artists_Load;
             invalid_pass.Visible = false;
         }
 
@@ -25,6 +37,11 @@ namespace Sign_upform
             string email = textBox1.Text;
             string password = textBox2.Text;
             string confirm_password = textBox3.Text;
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
             if (modify.User("SELECT * FROM Artists WHERE Email = '" + email + "' ").Count != 0)
             {
                 invalid_pass.Visible = true;
@@ -48,7 +65,7 @@ namespace Sign_upform
             Form formBackground = new Form();
             try
             {
-                using (Notification_Artist uu = new Notification_Artist())
+                using (Notification_Artist aa = new Notification_Artist())
                 {
                     formBackground.StartPosition = FormStartPosition.Manual;
                     formBackground.FormBorderStyle = FormBorderStyle.None;
@@ -60,12 +77,12 @@ namespace Sign_upform
                     formBackground.ShowInTaskbar = false;
                     formBackground.Show();
 
-                    uu.Owner = formBackground;
+                    aa.Owner = formBackground;
 
                     // Center Form2 on the screen
-                    uu.StartPosition = FormStartPosition.CenterParent;
+                    aa.StartPosition = FormStartPosition.CenterParent;
 
-                    uu.ShowDialog();
+                    aa.ShowDialog();
 
                     formBackground.Dispose();
                 }
@@ -118,8 +135,18 @@ namespace Sign_upform
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+           
             // The password character is an asterisk.
             textBox2.PasswordChar = '*';
+            // Kiểm tra điều kiện tối thiểu là 8 ký tự và hiển thị invalid_pass nếu không đạt
+            if (textBox2.Text.Length < 8 || textBox2.Text.Length > 24)
+            {
+                invalid_pass.Visible = true;
+            }
+            else
+            {
+                invalid_pass.Visible = false;
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -134,6 +161,25 @@ namespace Sign_upform
             Login_Artists login = new Login_Artists();
             login.Show();
             this.Hide();
+        }
+
+        private void Welcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Signup_Artists_Load(object sender, EventArgs e)
+        {
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+          panel1.Height, 12, 12)); // bo tròn khung login(panel)
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
+           button1.Height, 15, 15));
+            invalid_pass.Visible = false;
         }
     }
    

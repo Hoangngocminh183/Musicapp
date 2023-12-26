@@ -34,6 +34,7 @@ namespace Sign_upform.Playlist
         public MusicList()
         {
             InitializeComponent();
+            Share.Visible = false;
         }
 
         public void SetData(Music music)
@@ -86,6 +87,21 @@ namespace Sign_upform.Playlist
             {
                 Bitmap c = new Bitmap(@"D:\Năm 3-UIT\NHẬP MÔN CÔMG NGHỆ PHẦN MỀM\Sign_upform (1)\Sign_upform\Resources\Frame 517.png");
                 pictureBox6.Image = c; // gọi lại biến để xuất ảnh
+            }
+        }
+        private bool isShareVisible = false;
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            // Toggle the visibility state
+            isShareVisible = !isShareVisible;
+
+            if (isShareVisible)
+            {
+                Share.Show();
+            }
+            else
+            {
+                Share.Hide();
             }
         }
     }

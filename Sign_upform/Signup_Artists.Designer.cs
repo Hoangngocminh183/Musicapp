@@ -305,6 +305,7 @@
             this.Welcome.Size = new System.Drawing.Size(235, 58);
             this.Welcome.TabIndex = 0;
             this.Welcome.Text = "Sign up to join music\r\ncommunity today!";
+            this.Welcome.Click += new System.EventHandler(this.Welcome_Click);
             // 
             // panel1
             // 
@@ -328,12 +329,13 @@
             this.panel1.Controls.Add(this.Welcome);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(377, 76);
+            this.panel1.Location = new System.Drawing.Point(426, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(420, 137, 667, 37);
             this.panel1.Size = new System.Drawing.Size(316, 433);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // fileSystemWatcher3
             // 
@@ -349,7 +351,7 @@
             // 
             this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
             this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
-            this.invalid_pass.Location = new System.Drawing.Point(377, 25);
+            this.invalid_pass.Location = new System.Drawing.Point(426, 46);
             this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
             this.invalid_pass.Name = "invalid_pass";
             this.invalid_pass.Size = new System.Drawing.Size(316, 48);
@@ -362,7 +364,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1155, 591);
             this.Controls.Add(this.invalid_pass);
             this.Controls.Add(this.label2_signup);
             this.Controls.Add(this.panel1);
@@ -370,6 +372,7 @@
             this.Name = "Signup_Artists";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup_Artists";
+            this.Load += new System.EventHandler(this.Signup_Artists_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

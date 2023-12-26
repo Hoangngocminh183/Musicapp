@@ -41,14 +41,14 @@
             this.label2_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2_change.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2_change.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2_change.Location = new System.Drawing.Point(305, 78);
+            this.label2_change.Location = new System.Drawing.Point(304, 81);
             this.label2_change.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2_change.Name = "label2_change";
             this.label2_change.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2_change.Size = new System.Drawing.Size(467, 40);
             this.label2_change.TabIndex = 14;
-            this.label2_change.Text = "Your password reset request has been acknowledged. \r\n                           P" +
-    "lease check your email. ";
+            this.label2_change.Text = "Your password reset request has been acknowledged. \r\n                         Ple" +
+    "ase check your email. ";
             this.label2_change.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1_change
@@ -57,7 +57,7 @@
             this.label1_change.BackColor = System.Drawing.Color.Transparent;
             this.label1_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1_change.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1_change.Location = new System.Drawing.Point(341, 23);
+            this.label1_change.Location = new System.Drawing.Point(340, 26);
             this.label1_change.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1_change.Name = "label1_change";
             this.label1_change.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -76,6 +76,7 @@
             this.Controls.Add(this.label1_change);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "change_your_password_Artists";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "change_your_password_Artists";
             this.ResumeLayout(false);
             this.PerformLayout();

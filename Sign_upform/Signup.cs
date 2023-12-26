@@ -101,6 +101,13 @@ namespace Sign_upform
             string email = textBox1.Text;
             string password = textBox2.Text;
             string confirm_password = textBox3.Text;
+            // Check if email or password is empty
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
+
             if (modify.User("SELECT * FROM Users WHERE Email = '" + email + "' ").Count != 0 || confirm_password != password)
             {
                 invalid_pass.Visible=true;

@@ -38,11 +38,11 @@ namespace Sign_upform
 
             if (email.Trim() == "")
             {
-                MessageBox.Show("Please enter the email");
+                invalid_pass.Visible = true;
             }
             else if (password.Trim() == "")
             {
-                MessageBox.Show("Please enter the password");
+                invalid_pass.Visible = true;
             }
             else
             {
@@ -50,11 +50,13 @@ namespace Sign_upform
                 string query = "SELECT * FROM Artists WHERE Email = '" + email + "' and Password = '" + hashedPassword + "'";
                 if (modify.User(query).Count != 0)
                 {
-                    MessageBox.Show("Login successfully", "notifications", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Homepage_Fan homepage = new Homepage_Fan(); 
+                    homepage.Show();
+                    this.Close();
                 }
                 else
                 {
-                    invalid_pass.Text = "Your email or password is invalid";
+                   // invalid_pass.Text = "Your email or password is invalid";
                     invalid_pass.Visible = true;
                 }
             }
@@ -111,6 +113,15 @@ namespace Sign_upform
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_Artists_Load(object sender, EventArgs e)
+        {
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+           panel1.Height, 12, 12)); // bo tròn khung login(panel)
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
+           button1.Height, 15, 15));
+            invalid_pass.Visible = false;
         }
     }
 }

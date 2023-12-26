@@ -114,6 +114,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.textBox2_login);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -128,7 +129,7 @@
             this.panel1.Controls.Add(this.Welcome);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(412, 128);
+            this.panel1.Location = new System.Drawing.Point(444, 146);
             this.panel1.Margin = new System.Windows.Forms.Padding(667, 668, 0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(420, 137, 667, 37);
@@ -200,7 +201,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(176, 206);
+            this.label6.Location = new System.Drawing.Point(148, 205);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 17);
@@ -324,7 +325,7 @@
             // 
             this.invalid_pass.BackColor = System.Drawing.Color.Transparent;
             this.invalid_pass.Image = ((System.Drawing.Image)(resources.GetObject("invalid_pass.Image")));
-            this.invalid_pass.Location = new System.Drawing.Point(409, 74);
+            this.invalid_pass.Location = new System.Drawing.Point(441, 90);
             this.invalid_pass.Margin = new System.Windows.Forms.Padding(4);
             this.invalid_pass.Name = "invalid_pass";
             this.invalid_pass.Size = new System.Drawing.Size(316, 48);
@@ -346,6 +347,7 @@
             this.Name = "Login_Artists";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Login_Artists_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher10)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -40,24 +40,31 @@
             this.transfer_images = new System.Windows.Forms.PictureBox();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.play_pause = new System.Windows.Forms.PictureBox();
-            this.MusicLoop = new System.Windows.Forms.PictureBox();
             this.Next = new System.Windows.Forms.PictureBox();
             this.previous = new System.Windows.Forms.PictureBox();
-            this.RandomMusic = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.Share = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.linkicon = new System.Windows.Forms.PictureBox();
+            this.linktext = new Guna.UI2.WinForms.Guna2Button();
+            this.zaloicon = new System.Windows.Forms.PictureBox();
+            this.zalotext = new Guna.UI2.WinForms.Guna2Button();
+            this.face_text = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.heart_active)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transfer_images)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.play_pause)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MusicLoop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RandomMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            this.Share.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linkicon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaloicon)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleArtist
@@ -194,18 +201,6 @@
             this.play_pause.TabStop = false;
             this.play_pause.Click += new System.EventHandler(this.play_pause_Click);
             // 
-            // MusicLoop
-            // 
-            this.MusicLoop.Image = ((System.Drawing.Image)(resources.GetObject("MusicLoop.Image")));
-            this.MusicLoop.Location = new System.Drawing.Point(544, 32);
-            this.MusicLoop.Margin = new System.Windows.Forms.Padding(4);
-            this.MusicLoop.Name = "MusicLoop";
-            this.MusicLoop.Size = new System.Drawing.Size(16, 15);
-            this.MusicLoop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.MusicLoop.TabIndex = 156;
-            this.MusicLoop.TabStop = false;
-            this.MusicLoop.Click += new System.EventHandler(this.loop_Click);
-            // 
             // Next
             // 
             this.Next.Image = ((System.Drawing.Image)(resources.GetObject("Next.Image")));
@@ -230,18 +225,6 @@
             this.previous.TabStop = false;
             this.previous.Click += new System.EventHandler(this.previous_Click);
             // 
-            // RandomMusic
-            // 
-            this.RandomMusic.Image = ((System.Drawing.Image)(resources.GetObject("RandomMusic.Image")));
-            this.RandomMusic.Location = new System.Drawing.Point(368, 32);
-            this.RandomMusic.Margin = new System.Windows.Forms.Padding(4);
-            this.RandomMusic.Name = "RandomMusic";
-            this.RandomMusic.Size = new System.Drawing.Size(15, 15);
-            this.RandomMusic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.RandomMusic.TabIndex = 148;
-            this.RandomMusic.TabStop = false;
-            this.RandomMusic.Click += new System.EventHandler(this.RandomMusic_Click);
-            // 
             // pictureBox34
             // 
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
@@ -263,6 +246,7 @@
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox33.TabIndex = 147;
             this.pictureBox33.TabStop = false;
+            this.pictureBox33.Click += new System.EventHandler(this.pictureBox33_Click);
             // 
             // timer1
             // 
@@ -273,11 +257,130 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // Share
+            // 
+            this.Share.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(33)))), ((int)(((byte)(51)))));
+            this.Share.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(33)))), ((int)(((byte)(51)))));
+            this.Share.BorderRadius = 4;
+            this.Share.BorderThickness = 1;
+            this.Share.Controls.Add(this.pictureBox5);
+            this.Share.Controls.Add(this.linkicon);
+            this.Share.Controls.Add(this.linktext);
+            this.Share.Controls.Add(this.zaloicon);
+            this.Share.Controls.Add(this.zalotext);
+            this.Share.Controls.Add(this.face_text);
+            this.Share.Location = new System.Drawing.Point(274, 0);
+            this.Share.Margin = new System.Windows.Forms.Padding(4);
+            this.Share.Name = "Share";
+            this.Share.ShadowDecoration.Parent = this.Share;
+            this.Share.Size = new System.Drawing.Size(187, 91);
+            this.Share.TabIndex = 179;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(13, 9);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 157;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "blocks";
+            // 
+            // linkicon
+            // 
+            this.linkicon.BackColor = System.Drawing.Color.Transparent;
+            this.linkicon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkicon.Image = ((System.Drawing.Image)(resources.GetObject("linkicon.Image")));
+            this.linkicon.Location = new System.Drawing.Point(13, 64);
+            this.linkicon.Margin = new System.Windows.Forms.Padding(4);
+            this.linkicon.Name = "linkicon";
+            this.linkicon.Size = new System.Drawing.Size(20, 20);
+            this.linkicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.linkicon.TabIndex = 149;
+            this.linkicon.TabStop = false;
+            this.linkicon.Tag = "blocks";
+            // 
+            // linktext
+            // 
+            this.linktext.BorderRadius = 4;
+            this.linktext.CheckedState.Parent = this.linktext;
+            this.linktext.CustomImages.Parent = this.linktext;
+            this.linktext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(33)))), ((int)(((byte)(51)))));
+            this.linktext.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.linktext.ForeColor = System.Drawing.Color.White;
+            this.linktext.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(44)))), ((int)(((byte)(228)))));
+            this.linktext.HoverState.Parent = this.linktext;
+            this.linktext.Location = new System.Drawing.Point(5, 60);
+            this.linktext.Margin = new System.Windows.Forms.Padding(4);
+            this.linktext.Name = "linktext";
+            this.linktext.ShadowDecoration.Parent = this.linktext;
+            this.linktext.Size = new System.Drawing.Size(176, 27);
+            this.linktext.TabIndex = 148;
+            this.linktext.Text = "     Copy link";
+            this.linktext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // zaloicon
+            // 
+            this.zaloicon.BackColor = System.Drawing.Color.Transparent;
+            this.zaloicon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.zaloicon.Image = ((System.Drawing.Image)(resources.GetObject("zaloicon.Image")));
+            this.zaloicon.Location = new System.Drawing.Point(13, 34);
+            this.zaloicon.Margin = new System.Windows.Forms.Padding(4);
+            this.zaloicon.Name = "zaloicon";
+            this.zaloicon.Size = new System.Drawing.Size(17, 17);
+            this.zaloicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.zaloicon.TabIndex = 146;
+            this.zaloicon.TabStop = false;
+            this.zaloicon.Tag = "blocks";
+            // 
+            // zalotext
+            // 
+            this.zalotext.BorderRadius = 4;
+            this.zalotext.CheckedState.Parent = this.zalotext;
+            this.zalotext.CustomImages.Parent = this.zalotext;
+            this.zalotext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(33)))), ((int)(((byte)(51)))));
+            this.zalotext.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.zalotext.ForeColor = System.Drawing.Color.White;
+            this.zalotext.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(44)))), ((int)(((byte)(228)))));
+            this.zalotext.HoverState.Parent = this.zalotext;
+            this.zalotext.Location = new System.Drawing.Point(5, 32);
+            this.zalotext.Margin = new System.Windows.Forms.Padding(4);
+            this.zalotext.Name = "zalotext";
+            this.zalotext.ShadowDecoration.Parent = this.zalotext;
+            this.zalotext.Size = new System.Drawing.Size(176, 27);
+            this.zalotext.TabIndex = 144;
+            this.zalotext.Text = "     Zalo";
+            this.zalotext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // face_text
+            // 
+            this.face_text.BorderRadius = 4;
+            this.face_text.CheckedState.Parent = this.face_text;
+            this.face_text.CustomImages.Parent = this.face_text;
+            this.face_text.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(33)))), ((int)(((byte)(51)))));
+            this.face_text.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.face_text.ForeColor = System.Drawing.Color.White;
+            this.face_text.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(44)))), ((int)(((byte)(228)))));
+            this.face_text.HoverState.Parent = this.face_text;
+            this.face_text.Location = new System.Drawing.Point(5, 5);
+            this.face_text.Margin = new System.Windows.Forms.Padding(4);
+            this.face_text.Name = "face_text";
+            this.face_text.ShadowDecoration.Parent = this.face_text;
+            this.face_text.Size = new System.Drawing.Size(176, 27);
+            this.face_text.TabIndex = 142;
+            this.face_text.Text = "     Facebook";
+            this.face_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // NowplayingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.Controls.Add(this.Share);
             this.Controls.Add(this.TitleArtist);
             this.Controls.Add(this.TitleMusic);
             this.Controls.Add(this.Volume);
@@ -288,10 +391,8 @@
             this.Controls.Add(this.transfer_images);
             this.Controls.Add(this.pictureBox40);
             this.Controls.Add(this.play_pause);
-            this.Controls.Add(this.MusicLoop);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.previous);
-            this.Controls.Add(this.RandomMusic);
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.pictureBox33);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -302,12 +403,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.transfer_images)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.play_pause)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MusicLoop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RandomMusic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            this.Share.ResumeLayout(false);
+            this.Share.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linkicon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaloicon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,13 +429,18 @@
         private System.Windows.Forms.PictureBox transfer_images;
         private System.Windows.Forms.PictureBox pictureBox40;
         private System.Windows.Forms.PictureBox play_pause;
-        private System.Windows.Forms.PictureBox MusicLoop;
         private System.Windows.Forms.PictureBox Next;
         private System.Windows.Forms.PictureBox previous;
-        private System.Windows.Forms.PictureBox RandomMusic;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private Guna.UI2.WinForms.Guna2Panel Share;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox linkicon;
+        private Guna.UI2.WinForms.Guna2Button linktext;
+        private System.Windows.Forms.PictureBox zaloicon;
+        private Guna.UI2.WinForms.Guna2Button zalotext;
+        private Guna.UI2.WinForms.Guna2Button face_text;
     }
 }

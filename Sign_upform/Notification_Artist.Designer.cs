@@ -50,18 +50,19 @@
             this.panel1.Controls.Add(this.Welcome);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(9, 9);
+            this.panel1.Location = new System.Drawing.Point(-1, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(420, 137, 667, 37);
-            this.panel1.Size = new System.Drawing.Size(375, 162);
-            this.panel1.TabIndex = 8;
+            this.panel1.Size = new System.Drawing.Size(392, 162);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(224, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(221, 22);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 33);
@@ -73,12 +74,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(-3, 57);
+            this.label1.Location = new System.Drawing.Point(24, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 16);
+            this.label1.Size = new System.Drawing.Size(316, 16);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Registration success! Welcome to the world of melody.";
+            this.label1.Text = "Registration success! Welcome to InspiroMix";
             // 
             // pictureBox8
             // 
@@ -121,7 +122,7 @@
             this.Welcome.AutoSize = true;
             this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.Welcome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Welcome.Location = new System.Drawing.Point(20, 21);
+            this.Welcome.Location = new System.Drawing.Point(21, 20);
             this.Welcome.Margin = new System.Windows.Forms.Padding(27, 22, 27, 16);
             this.Welcome.Name = "Welcome";
             this.Welcome.Size = new System.Drawing.Size(199, 31);
@@ -132,11 +133,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 178);
+            this.ClientSize = new System.Drawing.Size(373, 167);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Notification_Artist";
             this.Text = "Notification_Artist";
+            this.Load += new System.EventHandler(this.Notification_Artist_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

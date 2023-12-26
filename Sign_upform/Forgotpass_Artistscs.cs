@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,16 @@ namespace Sign_upform
 {
     public partial class Forgotpass_Artistscs : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+               int nLeftRect,
+               int nTopRect,
+               int nRightRect,
+               int nBottomRect,
+               int nWidthEllipse,
+               int nHeightEllipse
+            );
         public Forgotpass_Artistscs()
         {
             InitializeComponent();
@@ -72,6 +83,14 @@ namespace Sign_upform
         private void invalid_pass_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Forgotpass_Artistscs_Load(object sender, EventArgs e)
+        {
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
+       button1.Height, 12, 12)); // bo tròn khung login(panel)
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+         panel1.Height, 12, 12));
         }
     }
 }

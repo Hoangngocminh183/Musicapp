@@ -90,11 +90,11 @@ namespace Sign_upform
 
             if (email.Trim() == "")
             {
-                MessageBox.Show("Please enter the email");
+                invalid_pass.Visible = true;
             }
             else if (password.Trim() == "")
             {
-                MessageBox.Show("Please enter the password");
+                invalid_pass.Visible = true;
             }
             else
             {

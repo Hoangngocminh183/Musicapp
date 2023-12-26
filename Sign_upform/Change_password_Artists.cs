@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,16 @@ namespace Sign_upform
 {
     public partial class Change_password_Artists : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+              (
+                 int nLeftRect,
+                 int nTopRect,
+                 int nRightRect,
+                 int nBottomRect,
+                 int nWidthEllipse,
+                 int nHeightEllipse
+              );
         public Change_password_Artists()
         {
             InitializeComponent();
@@ -97,6 +108,14 @@ namespace Sign_upform
         private void invalid_pass_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Change_password_Artists_Load(object sender, EventArgs e)
+        {
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width,
+       button1.Height, 12, 12));
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+        panel1.Height, 12, 12));
         }
     }
 }
