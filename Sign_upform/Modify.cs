@@ -200,6 +200,41 @@ namespace Sign_upform
 
         return artistControls;
     }
+        public void UpdateFollowerCount(string artistName, int newFollowerCount)
+        {
+            string query = "UPDATE Followers SET Follower = @newFollowerCount WHERE Artist = @artistName";
 
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@newFollowerCount", newFollowerCount);
+                sqlCommand.Parameters.AddWithValue("@artistName", artistName);
+                sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
+        }
+        public int GetFollowerCount(string artistName)
+        {
+            int followerCount = 0;
+            string query = "SELECT Follower FROM Followers WHERE Artist = @artistName";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@artistName", artistName);
+                object result = sqlCommand.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out followerCount))
+                {
+                    // Số lượng người theo dõi đã được lấy thành công
+                }
+
+                sqlConnection.Close();
+            }
+
+            return followerCount;
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchArtist));
             this.follow = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Follwercount = new System.Windows.Forms.Label();
             this.pictureArtist = new System.Windows.Forms.PictureBox();
             this.Artistname = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureArtist)).BeginInit();
@@ -58,21 +58,21 @@
             this.follow.Text = "Follow";
             this.follow.Click += new System.EventHandler(this.follow_Click);
             // 
-            // label5
+            // Follwercount
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label5.Location = new System.Drawing.Point(137, 52);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 21);
-            this.label5.TabIndex = 167;
-            this.label5.Tag = "blocks";
-            this.label5.Text = "210.895 followers";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.Follwercount.BackColor = System.Drawing.Color.Transparent;
+            this.Follwercount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Follwercount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Follwercount.ForeColor = System.Drawing.Color.White;
+            this.Follwercount.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Follwercount.Location = new System.Drawing.Point(137, 52);
+            this.Follwercount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Follwercount.Name = "Follwercount";
+            this.Follwercount.Size = new System.Drawing.Size(159, 21);
+            this.Follwercount.TabIndex = 167;
+            this.Follwercount.Tag = "blocks";
+            this.Follwercount.Text = "210.895 followers";
+           // this.Follwercount.Click += new System.EventHandler(this.Followercount_Click);
             // 
             // pictureArtist
             // 
@@ -110,7 +110,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.Artistname);
             this.Controls.Add(this.follow);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Follwercount);
             this.Controls.Add(this.pictureArtist);
             this.Name = "SearchArtist";
             this.Size = new System.Drawing.Size(463, 146);
@@ -124,7 +124,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button follow;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Follwercount;
         private System.Windows.Forms.PictureBox pictureArtist;
         private System.Windows.Forms.Label Artistname;
     }

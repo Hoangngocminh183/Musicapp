@@ -13,7 +13,6 @@ namespace Sign_upform
 {
     public partial class ArrtistPage : Form
     {
-        private string artistName;
         public ArrtistPage()
         {
             InitializeComponent();
@@ -64,6 +63,13 @@ namespace Sign_upform
         private void flowLayoutSearch_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            Homepage_Fan homepage_Fan = new Homepage_Fan();
+            homepage_Fan.Show();
+            this.Hide();
         }
     }
 }

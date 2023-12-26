@@ -39,26 +39,26 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.NextPage1 = new System.Windows.Forms.PictureBox();
             this.PreviousPage = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutMoreMusic = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.nowplayingControl1 = new Sign_upform.Playmusic.NowplayingControl();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextPage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreviousPage)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.SuspendLayout();
             // 
             // Home
@@ -84,7 +84,7 @@
             this.SearchSong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(186)))), ((int)(((byte)(208)))));
             this.SearchSong.HideSelection = false;
             this.SearchSong.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.SearchSong.Location = new System.Drawing.Point(123, 35);
+            this.SearchSong.Location = new System.Drawing.Point(113, 35);
             this.SearchSong.Margin = new System.Windows.Forms.Padding(4);
             this.SearchSong.Name = "SearchSong";
             this.SearchSong.Size = new System.Drawing.Size(451, 19);
@@ -172,7 +172,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
-            this.panel3.Controls.Add(this.pictureBox12);
+            this.panel3.Controls.Add(this.pictureBox29);
             this.panel3.Controls.Add(this.pictureBox30);
             this.panel3.Controls.Add(this.NextPage1);
             this.panel3.Controls.Add(this.PreviousPage);
@@ -184,25 +184,12 @@
             this.panel3.Size = new System.Drawing.Size(955, 92);
             this.panel3.TabIndex = 145;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(833, 22);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(43, 39);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 166;
-            this.pictureBox12.TabStop = false;
-            // 
             // pictureBox30
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
             this.pictureBox30.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(884, 22);
+            this.pictureBox30.Location = new System.Drawing.Point(886, 25);
             this.pictureBox30.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(43, 39);
@@ -215,7 +202,7 @@
             this.NextPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.NextPage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextPage1.Image = ((System.Drawing.Image)(resources.GetObject("NextPage1.Image")));
-            this.NextPage1.Location = new System.Drawing.Point(59, 34);
+            this.NextPage1.Location = new System.Drawing.Point(45, 34);
             this.NextPage1.Margin = new System.Windows.Forms.Padding(4);
             this.NextPage1.Name = "NextPage1";
             this.NextPage1.Size = new System.Drawing.Size(21, 20);
@@ -229,7 +216,7 @@
             this.PreviousPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PreviousPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PreviousPage.Image = ((System.Drawing.Image)(resources.GetObject("PreviousPage.Image")));
-            this.PreviousPage.Location = new System.Drawing.Point(23, 34);
+            this.PreviousPage.Location = new System.Drawing.Point(10, 34);
             this.PreviousPage.Margin = new System.Windows.Forms.Padding(4);
             this.PreviousPage.Name = "PreviousPage";
             this.PreviousPage.Size = new System.Drawing.Size(21, 20);
@@ -237,6 +224,18 @@
             this.PreviousPage.TabIndex = 2;
             this.PreviousPage.TabStop = false;
             this.PreviousPage.Click += new System.EventHandler(this.PreviousPage_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(74, 25);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(732, 41);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 171;
+            this.pictureBox4.TabStop = false;
             // 
             // panel2
             // 
@@ -283,17 +282,18 @@
             this.nowplayingControl1.TabIndex = 147;
             this.nowplayingControl1.Load += new System.EventHandler(this.nowplayingControl1_Load);
             // 
-            // pictureBox4
+            // pictureBox29
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(88, 22);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(732, 41);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 171;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.pictureBox29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
+            this.pictureBox29.Location = new System.Drawing.Point(825, 25);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox29.TabIndex = 172;
+            this.pictureBox29.TabStop = false;
             // 
             // MoreMusic
             // 
@@ -314,13 +314,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.InspiroMix)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextPage1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreviousPage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,9 +341,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMoreMusic;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox29;
     }
 }

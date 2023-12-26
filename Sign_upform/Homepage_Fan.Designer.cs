@@ -306,7 +306,7 @@
             // 
             this.flowLayoutSearch.Location = new System.Drawing.Point(13, 80);
             this.flowLayoutSearch.Name = "flowLayoutSearch";
-            this.flowLayoutSearch.Size = new System.Drawing.Size(932, 151);
+            this.flowLayoutSearch.Size = new System.Drawing.Size(932, 207);
             this.flowLayoutSearch.TabIndex = 156;
             this.flowLayoutSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutSearch_Paint);
             // 

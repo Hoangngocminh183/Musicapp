@@ -27,6 +27,7 @@ namespace Sign_upform.Playlist
                int nHeightEllipse
             );
         public event EventHandler MusicClicked;
+        public event EventHandler<string> ArtistClicked;
         private string filePath;
         private Music musicData;
         public MusicList()
@@ -63,7 +64,7 @@ namespace Sign_upform.Playlist
         }
         private void labelArtist_Click(object sender, EventArgs e)
         {
-
+            ArtistClicked?.Invoke(this, musicData.Artist);
         }
 
         private void MusicList_Load(object sender, EventArgs e)

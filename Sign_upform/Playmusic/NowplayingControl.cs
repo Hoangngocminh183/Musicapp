@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Guna.UI2.AnimatorNS;
 using Guna.UI2.WinForms.Suite;
@@ -11,6 +12,16 @@ namespace Sign_upform.Playmusic
 {
     public partial class NowplayingControl : UserControl
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+           (
+              int nLeftRect,
+              int nTopRect,
+              int nRightRect,
+              int nBottomRect,
+              int nWidthEllipse,
+              int nHeightEllipse
+           );
         private string filePath;
         private IWavePlayer wavePlayer;
         private bool isPlaying; // theo dõi cơ chế phát nhạc
@@ -239,7 +250,8 @@ namespace Sign_upform.Playmusic
 
         private void NowplayingControl_Load(object sender, EventArgs e)
         {
-
+            transfer_images.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, transfer_images.Width,
+    transfer_images.Height, 12, 12));
         }
 
         private void guna2ProgressBar1_ValueChanged(object sender, EventArgs e)

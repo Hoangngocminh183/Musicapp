@@ -69,10 +69,9 @@
             this.TitleArtist.Location = new System.Drawing.Point(103, 27);
             this.TitleArtist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleArtist.Name = "TitleArtist";
-            this.TitleArtist.Size = new System.Drawing.Size(36, 16);
+            this.TitleArtist.Size = new System.Drawing.Size(0, 16);
             this.TitleArtist.TabIndex = 149;
             this.TitleArtist.Tag = "blocks";
-            this.TitleArtist.Text = "Artist";
             this.TitleArtist.Click += new System.EventHandler(this.TitleArtist_Click);
             // 
             // TitleMusic
@@ -84,10 +83,9 @@
             this.TitleMusic.Location = new System.Drawing.Point(103, 2);
             this.TitleMusic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleMusic.Name = "TitleMusic";
-            this.TitleMusic.Size = new System.Drawing.Size(40, 18);
+            this.TitleMusic.Size = new System.Drawing.Size(0, 18);
             this.TitleMusic.TabIndex = 150;
             this.TitleMusic.Tag = "blocks";
-            this.TitleMusic.Text = "Title";
             this.TitleMusic.TextChanged += new System.EventHandler(this.TitleMusic_TextChanged);
             this.TitleMusic.Click += new System.EventHandler(this.TitleMusic_Click);
             // 

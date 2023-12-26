@@ -16,6 +16,7 @@ namespace Sign_upform
         public string SongCode { get; set; }
 
         public string ImageArtits { get; set; }
+        public string Follower { get; set; }
 
     }
 }

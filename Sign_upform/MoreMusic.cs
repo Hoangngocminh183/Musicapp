@@ -34,9 +34,33 @@ namespace Sign_upform
                 // Thêm User Control vào FlowLayoutPanelToppicks
                 flowLayoutMoreMusic.Controls.Add(musicList1);
 
-               musicList1.MusicClicked += MusicControl_MusicClicked;
+                musicList1.MusicClicked += MusicControl_MusicClicked;
+                musicList1.ArtistClicked += MusicControl_ArtistClicked; // Thêm đoạn này để đăng ký sự kiện ArtistClicked
                 // Thêm bài hát vào danh sách playlist trong NowplayingControl
                 nowplayingControl1.AddToPlaylist(music);
+            }
+        }
+        private void MusicControl_ArtistClicked(object sender, string artistName)
+        {
+            // Mở ArtistPage và chuyển artistName
+            ArrtistPage artistPage = new ArrtistPage();
+            artistPage.StartPosition = FormStartPosition.CenterScreen;
+            // Load thông tin từ bảng Followers
+            artistPage.LoadArtistControls(artistName);
+            // Tải kết quả tìm kiếm từ Followers vào flowLayoutSearch
+            LoadSearchResultsFromFollowers(artistName, artistPage);
+            artistPage.Show();
+        }
+        private void LoadSearchResultsFromFollowers(string artistName, ArrtistPage artistPage)
+        {
+            // Gọi phương thức trên ArtistPage để tải kết quả tìm kiếm từ Followers
+            List<Music> searchResults = modify.SearchMusicByArtist(artistName);
+
+            foreach (Music music in searchResults)
+            {
+                SearchArtist searchArtist = new SearchArtist();
+                searchArtist.SetData(music);
+                artistPage.AddSearchResult(searchArtist); // AddSearchResult là một phương thức bạn cần triển khai trong ArtistPage
             }
         }
         private void MusicControl_MusicClicked(object sender, EventArgs e)

@@ -160,6 +160,7 @@
             // guna2TextBox1
             // 
             this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.BackgroundImage")));
             this.guna2TextBox1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2TextBox1.BorderRadius = 7;
             this.guna2TextBox1.BorderThickness = 0;
@@ -174,7 +175,7 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(186)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Location = new System.Drawing.Point(285, 13);
@@ -229,6 +230,7 @@
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 165;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // SearchSong
             // 
@@ -268,7 +270,7 @@
             // 
             // pictureBox30
             // 
-            this.pictureBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(17)))), ((int)(((byte)(29)))));
+            this.pictureBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
             this.pictureBox30.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
             this.pictureBox30.Location = new System.Drawing.Point(1101, 13);
@@ -281,9 +283,10 @@
             // 
             // flowLayoutSearch
             // 
+            this.flowLayoutSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutSearch.BackgroundImage")));
             this.flowLayoutSearch.Location = new System.Drawing.Point(223, 113);
             this.flowLayoutSearch.Name = "flowLayoutSearch";
-            this.flowLayoutSearch.Size = new System.Drawing.Size(932, 151);
+            this.flowLayoutSearch.Size = new System.Drawing.Size(706, 151);
             this.flowLayoutSearch.TabIndex = 177;
             this.flowLayoutSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutSearch_Paint_1);
             // 
