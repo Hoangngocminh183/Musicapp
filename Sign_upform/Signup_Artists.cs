@@ -65,7 +65,7 @@ namespace Sign_upform
             Form formBackground = new Form();
             try
             {
-                using (Notification_Artist aa = new Notification_Artist())
+                using (Notifications uu = new Notifications())
                 {
                     formBackground.StartPosition = FormStartPosition.Manual;
                     formBackground.FormBorderStyle = FormBorderStyle.None;
@@ -77,12 +77,12 @@ namespace Sign_upform
                     formBackground.ShowInTaskbar = false;
                     formBackground.Show();
 
-                    aa.Owner = formBackground;
+                    uu.Owner = formBackground;
 
                     // Center Form2 on the screen
-                    aa.StartPosition = FormStartPosition.CenterParent;
+                    uu.StartPosition = FormStartPosition.CenterParent;
 
-                    aa.ShowDialog();
+                    uu.ShowDialog();
 
                     formBackground.Dispose();
                 }
