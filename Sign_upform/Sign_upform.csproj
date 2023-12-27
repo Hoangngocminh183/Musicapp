@@ -349,12 +349,27 @@
     <None Include="Resources\pictureBox4.Image.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Gradient background%28windform size%29.jpg" />
+    <Content Include="Resources\3107 2%28Minh%29 - Thumbnail.png" />
+    <Content Include="Resources\3107 2%28Nhi%29 - Thumbnail.png" />
+    <Content Include="Resources\3107 3 - Thumbnail.png" />
+    <Content Include="Resources\Anh không làm gì đâu anh thề - Thumbnail.png" />
+    <Content Include="Resources\Ánh sao và bầu trời - Thumbnail.png" />
+    <Content Include="Resources\Bước qua mùa cô đơn - Thumbnail.png" />
+    <Content Include="Resources\Cảm nắng- Thumbnail.png" />
+    <Content Include="Resources\Có em chờ.png" />
+    <Content Include="Resources\Dù cho mai về sau - Thumbnail.png" />
+    <Content Include="Resources\Gradient background%28windform size%29.jpg" />
+    <Content Include="Resources\3107 - Thumbnail.png" />
     <Content Include="Resources\angle-left 3.png" />
     <Content Include="Resources\Frame 517.png" />
     <Content Include="Resources\heart.png" />
     <Content Include="Resources\Pause.png" />
-    <Content Include="z5011186468840_a960187cc7e20ff102713f22ba78c082.jpg" />
+    <Content Include="Resources\Tháng 11 trở gió- Thumbnail.png" />
+    <Content Include="Resources\Tháng mấy em nhớ anh- Thumbnail.png" />
+    <Content Include="Resources\Tôi đã quên thật rồi - Thumbnail.png" />
+    <Content Include="Resources\Từ chối nhẹ nhàng thôi - Thumbnail.png" />
+    <Content Include="Resources\Yêu người có ước mơ -  Thumbnail.png" />
+    <Content Include="Resources\z5011186468840_a960187cc7e20ff102713f22ba78c082.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
