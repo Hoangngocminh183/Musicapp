@@ -72,7 +72,7 @@
             this.Follwercount.TabIndex = 167;
             this.Follwercount.Tag = "blocks";
             this.Follwercount.Text = "210.895 followers";
-           // this.Follwercount.Click += new System.EventHandler(this.Followercount_Click);
+            this.Follwercount.Click += new System.EventHandler(this.Follwercount_Click);
             // 
             // pictureArtist
             // 

@@ -61,8 +61,8 @@ namespace Sign_upform.Playlist
                         // Cập nhật hiển thị số lượng người theo dõi
                         int currentFollowers = int.Parse(Follwercount.Text.Split(' ')[0]);
                         currentFollowers++;
-                        Follwercount.Text = currentFollowers + " follow";
-
+                        Follwercount.Text = currentFollowers + " followers";
+                        follow.Text = "Following";
                         // Cập nhật cơ sở dữ liệu với số lượng người theo dõi mới
                         string artistName = Artistname.Text;
                         Modify modify = new Modify();
@@ -80,6 +80,10 @@ namespace Sign_upform.Playlist
             }
 
         }
-        
+
+        private void Follwercount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
