@@ -30,7 +30,14 @@ namespace Sign_upform
             this.Load += Signup_Artists_Load;
             invalid_pass.Visible = false;
         }
+        private bool IsValidPassword(string password)
+        {
+            // Add your custom logic to check for special characters in the password
+            // For example, you can use regular expressions or any other method to validate
 
+            // Sample: Allow only letters and digits
+            return System.Text.RegularExpressions.Regex.IsMatch(password, @"^[a-zA-Z0-9]+$");
+        }
         Modify modify = new Modify();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,6 +45,19 @@ namespace Sign_upform
             string password = textBox2.Text;
             string confirm_password = textBox3.Text;
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
+            // Check for white spaces in email or password
+            if (email.Contains(" ") || password.Contains(" "))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
+
+            // Check for special characters in password
+            if (!IsValidPassword(password))
             {
                 invalid_pass.Visible = true;
                 return;

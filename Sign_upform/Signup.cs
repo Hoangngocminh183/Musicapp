@@ -95,24 +95,55 @@ namespace Sign_upform
         {
             //hình i accept term_condition
         }
+        private bool IsValidPassword(string password)
+        {
+            // Add your custom logic to check for special characters in the password
+            // For example, you can use regular expressions or any other method to validate
+
+            // Sample: Allow only letters and digits
+            return System.Text.RegularExpressions.Regex.IsMatch(password, @"^[a-zA-Z0-9]+$");
+        }
         Modify modify = new Modify();
         private void button1_Click(object sender, EventArgs e)
         {
             string email = textBox1.Text;
             string password = textBox2.Text;
             string confirm_password = textBox3.Text;
+
+            
             // Check if email or password is empty
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 invalid_pass.Visible = true;
                 return;
             }
+            // Check for white spaces in email or password
+            if (email.Contains(" ") || password.Contains(" "))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
 
-            if (modify.User("SELECT * FROM Users WHERE Email = '" + email + "' ").Count != 0 || confirm_password != password)
+            // Check for special characters in password
+            if (!IsValidPassword(password))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
+
+            // Check if the confirm password matches the password
+            if (confirm_password != password)
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
+
+                if (modify.User("SELECT * FROM Users WHERE Email = '" + email + "' ").Count != 0 || confirm_password != password)
             {
                 invalid_pass.Visible=true;
                 return;
             }
+
             try
             {
                 //Hash

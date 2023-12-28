@@ -81,6 +81,14 @@ namespace Sign_upform
         {
 
         }
+        private bool IsValidPassword(string password)
+        {
+            // Add your custom logic to check for special characters in the password
+            // For example, you can use regular expressions or any other method to validate
+
+            // Sample: Allow only letters and digits
+            return System.Text.RegularExpressions.Regex.IsMatch(password, @"^[a-zA-Z0-9]+$");
+        }
         Modify modify = new Modify();
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -88,6 +96,19 @@ namespace Sign_upform
             string email = textBox1_login.Text;
             string password = textBox2_login.Text;
 
+            // Check for white spaces in email or password
+            if (email.Contains(" ") || password.Contains(" "))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
+
+            // Check for special characters in password
+            if (!IsValidPassword(password))
+            {
+                invalid_pass.Visible = true;
+                return;
+            }
             if (email.Trim() == "")
             {
                 invalid_pass.Visible = true;
